@@ -32,22 +32,29 @@ public class MainController {
 		model.addObject("title", "Army Web - Welcome");
 		model.addObject("message", "This is default page!");
 
-		model.addObject("users", HibernateUtils.getUsers(0,10));
-
 		model.setViewName("hello");
 		return model;
 
+	}
+
+	@RequestMapping(value = { "/staff"}, method = RequestMethod.GET)
+	public ModelAndView staff() {
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Army Web - Staff");
+		model.addObject("users", HibernateUtils.getUsersByRole("ROLE_ADMIN"));
+
+		model.setViewName("staff");
+		return model;
 	}
 
 	@RequestMapping(value = { "/recruits"}, method = RequestMethod.GET)
 	public ModelAndView recruits() {
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Army Web - Recruits");
-		model.addObject("users", HibernateUtils.getUsers(0,10));
+		model.addObject("users", HibernateUtils.getUsers(0,20));
 
 		model.setViewName("recruits");
 		return model;
-
 	}
 
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)

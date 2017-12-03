@@ -18,7 +18,7 @@ public class UsersEntity {
     private String phone;
     private String adress;
     private String email;
-    private String photo_link;
+    private String photoLink;
 
     public String getUsername() {
         return username;
@@ -100,20 +100,20 @@ public class UsersEntity {
         this.description = description;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public String getRank() {
         return rank;
     }
 
     public void setRank(String rank) {
         this.rank = rank;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getPhone() {
@@ -140,12 +140,12 @@ public class UsersEntity {
         this.email = email;
     }
 
-    public String getPhoto_link() {
-        return photo_link;
+    public String getPhotoLink() {
+        return photoLink;
     }
 
-    public void setPhoto_link(String photo_link) {
-        this.photo_link = photo_link;
+    public void setPhotoLink(String photoLink) {
+        this.photoLink = photoLink;
     }
 
     @Override
@@ -170,7 +170,7 @@ public class UsersEntity {
         if (phone != null ? !phone.equals(that.phone) : that.phone != null) return false;
         if (adress != null ? !adress.equals(that.adress) : that.adress != null) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
-        if (photo_link != null ? !photo_link.equals(that.photo_link) : that.photo_link != null) return false;
+        if (photoLink != null ? !photoLink.equals(that.photoLink) : that.photoLink != null) return false;
 
         return true;
     }
@@ -191,8 +191,8 @@ public class UsersEntity {
         result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (adress != null ? adress.hashCode() : 0);
-        result = 31 * result + (photo_link != null ? photo_link.hashCode() : 0);
-        result = 31 * result + (photo_link != null ? photo_link.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (photoLink != null ? photoLink.hashCode() : 0);
         return result;
     }
 }

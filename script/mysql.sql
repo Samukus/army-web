@@ -64,6 +64,7 @@ VALUES ('mkyong20','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
 VALUES ('mkyong21','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
+
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
 VALUES ('mkyong22','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
@@ -71,6 +72,10 @@ VALUES ('mkyong22','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
 VALUES ('alex','123456', true, "Alexey", "Skrobotov", "Yurevich", "1994-04-12", "Suldier", "B-", "Biography here", "Soldier in reserve", "In reserve", "+78994123418", "Novosibirsk, Kr, 94", "test_alex@mail.com", "resources/pictures/test-user-avatar.jpg");
+
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('mkyong23','123456', true, "Ibramafsa", "Gauntfasf", "", "1994-01-01", "Commisarfasf", "A++++", "Biography herefasf", "Retired Generala", "Retirede", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
 
 INSERT INTO user_roles (username, role)
 VALUES ('mkyong', 'ROLE_USER');

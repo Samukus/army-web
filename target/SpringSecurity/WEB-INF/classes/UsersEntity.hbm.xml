@@ -50,7 +50,7 @@
         <property name="email">
             <column name="email" sql-type="varchar(128)" length="128" not-null="true"/>
         </property>
-        <property name="photo_link">
+        <property name="photoLink">
             <column name="photo_link" sql-type="varchar(512)" length="512" not-null="true"/>
         </property>
     </class>

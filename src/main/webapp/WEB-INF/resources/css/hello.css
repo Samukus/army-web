@@ -13,11 +13,11 @@ body {
 	background-size: cover;
 }
 
-@media (min-width: 992px) {
-	body {
-		padding-top: 56px;
-	}
-}
+/*@media (min-width: 992px) {*/
+	/*body {*/
+		/*padding-top: 56px;*/
+	/*}*/
+/*}*/
 
 /*.card {*/
 	/*height: 75%;*/

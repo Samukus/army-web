@@ -35,29 +35,35 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="/">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+                <%--<li class="nav-item">--%>
+                <%--<a class="nav-link" href="#">About</a>--%>
+                <%--</li>--%>
+                <%--<li class="nav-item">--%>
+                <%--<a class="nav-link" href="#">Services</a>--%>
+                <%--</li>--%>
+                <%--<li class="nav-item">--%>
+                <%--<a class="nav-link" href="#">Contact</a>--%>
+                <%--</li>--%>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/recruits">Recruits</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="/staff">Staff</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-                <div class="col-sm-6 col-centered">
                     <c:if test="${pageContext.request.userPrincipal.name != null}">
-                        <a class="btn btn-info" href="/user?id=${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</a>
-                        <a class="btn btn-warning" href="/logout">Logout</a>
+                        <a class="btn btn-light" href="/user?id=${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</a>
+                        <a class="btn btn-danger" href="/logout">Logout</a>
                     </c:if>
                     <c:if test="${pageContext.request.userPrincipal.name == null}">
                         <a class="btn btn-success" href="/login">Login</a>
                     </c:if>
-                </div>
+                </li>
             </ul>
         </div>
     </div>

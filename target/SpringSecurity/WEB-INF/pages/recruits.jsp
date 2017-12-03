@@ -51,6 +51,9 @@
                     <a class="nav-link" href="/recruits">Recruits</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/staff">Staff</a>
+                </li>
+                <li class="nav-item">
                     <c:if test="${pageContext.request.userPrincipal.name != null}">
                         <a class="btn btn-light" href="/user?id=${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</a>
                         <a class="btn btn-danger" href="/logout">Logout</a>
@@ -96,7 +99,7 @@
                 <div class="card btn btn-outline-dark" >
                     <a href="/user?id=${user.username}" style="text-decoration: none">
                             <%--<img class="card-img-top" src="http://placehold.it/500x325" alt="">--%>
-                        <img class="card-img-top" src="${user.photo_link}" alt="">
+                        <img class="card-img-top" src="${user.photoLink}" alt="">
                     </a>
                     <div class="card-body" >
                         <h4 class="card-title">${user.fname} ${user.sname}</h4>

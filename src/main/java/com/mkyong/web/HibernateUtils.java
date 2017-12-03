@@ -42,7 +42,7 @@ public class HibernateUtils {
             session.close();
         }
 
-        List<UsersEntity> users = getUsers(2, 5);
+        List<UsersEntity> users = getUsersByRole("ROLE_ADMIN");
         for (UsersEntity user: users)
         {
             System.out.println(String.format("Username: %s", user.getUsername()));
@@ -66,6 +66,19 @@ public class HibernateUtils {
                                             .setMaxResults(count)
                                             .setFirstResult(offset)
                                             .list();
+        session.close();
+
+        if ( UserList == null || UserList.isEmpty())
+            return null;
+
+        return UserList;
+    }
+
+    public static List<UsersEntity> getUsersByRole(String role) {
+        Session session = getSession();
+        List<UsersEntity> UserList = session.createQuery(String
+                .format("select user from UsersEntity user, UserRolesEntity role where role.role='%s' and user.username=role.username", role))
+                .list();
         session.close();
 
         if ( UserList == null || UserList.isEmpty())
