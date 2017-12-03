@@ -119,6 +119,8 @@ public class MainController {
 			model.addObject("phone", user.getPhone());
 			model.addObject("address", user.getAdress());
 			model.addObject("email", user.getEmail());
+
+			model.addObject("user", user);
 		}
 
 		return model;

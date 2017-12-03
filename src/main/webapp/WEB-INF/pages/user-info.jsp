@@ -17,10 +17,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>AHM Kamal</title>
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-
     <link href="<c:url value="resources/css/bootstrap/bootstrap.css" />" rel="stylesheet">
+
+    <script src="<c:url value="resources/js/jquery/jquery.min.js" />"></script>
+    <script src="<c:url value="resources/js/bootstrap/bootstrap.bundle.min.js" />"></script>
+    <link href="<c:url value="resources/css/font-awesome.css" />" rel="stylesheet">
+
     <link href="<c:url value="resources/css/user-info.css" />" rel="stylesheet">
 </head>
 
@@ -76,13 +78,18 @@
 
             <div class="row" style="margin-top:0px;">
                 <div class="col-md-9">
-                    <h2 style="font-size:28px"><strong>${fname} ${sname}</strong></h2>
+                    <h2 style="font-size:28px"><strong>${user.fname} ${user.sname}</strong></h2>
                 </div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <div class="col-md-3">
-                        <div class="button" style="float:right;">
-                            <a href="#" class="btn btn-warning btn-sm">Edit User Info</a>
+                        <div style="float:right;">
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalEdit">
+                                User Edit
+                            </button>
                         </div>
+                        <%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--%>
+                            <%--Launch demo modal--%>
+                        <%--</button>--%>
                     </div>
                 </sec:authorize>
             </div>
@@ -94,14 +101,14 @@
             </div>
 
             <div class="col-sm-6"> <!-- Rank & Qualifications -->
-                <h5 style="color:#3AAA64">${role} <small></small></h5>
-                <p>${fname} ${sname} ${tname}</p>
+                <h5 style="color:#3AAA64">${user.workRole} <small></small></h5>
+                <p>${user.sname} ${user.fname} ${user.tname}</p>
                 <div class="row" style="margin-top: 0px"><!-- Title -->
                     <div class="col-sm-3">
                         <p>Title:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>${rank}</p>
+                        <p>${user.rank}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Address -->
@@ -109,7 +116,7 @@
                         <p>Address:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>${address}</p>
+                        <p>${user.adress}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Category -->
@@ -117,7 +124,7 @@
                         <p>Category:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>${category}</p>
+                        <p>${user.category}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Status -->
@@ -125,7 +132,7 @@
                         <p>Status:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>${status}</p>
+                        <p>${user.status}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Email -->
@@ -133,7 +140,7 @@
                         <p>Email:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>${email}</p>
+                        <p>${user.email}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Date of Birth -->
@@ -142,16 +149,16 @@
                     </div>
                     <div class="well">
                         <div class="form-group">
-                            <input type="date" class="form-control" id="exampleInputDOB1" value="${date}" readonly="readonly">
+                            <input type="date" class="form-control" id="exampleInputDOB1" value="${user.date}" readonly="readonly">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 text-center"> <!-- Phone & Social -->
-                <span class="number" style="font-size:18px">Phone:<strong>${phone}</strong></span>
+                <span class="number" style="font-size:18px">Phone:<strong>${user.phone}</strong></span>
                 <div class="button" style="padding-top:18px">
-                    <a href="mailto:${email}" class="btn btn-outline-success btn-block">Send Email</a>
+                    <a href="mailto:${user.email}" class="btn btn-outline-success btn-block">Send Email</a>
                 </div>
                 <div class="social-icons" style="padding-top:18px">
                     <a href="#">
@@ -193,15 +200,10 @@
                     <div class="col-md-11">
                         <h2 class="card-title" style="color:#009688"><i class="fa fa-user fa-fw"></i>Biography</h2>
                     </div>
-                    <sec:authorize access="hasRole('ROLE_ADMIN')">
-                        <div class="col-md-1 pull-right">
-                            <a class="btn btn-warning btn-block" href="#">Edit</a>
-                        </div>
-                    </sec:authorize>
                 </div>
 
                 <div style="padding: 10px">
-                    <p>Following his vengeance against Aldo Dercius, Gaunt served as the ranking Commissariat agent for the Hyrkans, and played a crucial part in the battle for the world of Balhaut, where he led his men alongside the Warmaster Slaydo in the centre of the Imperial front, in the mudlakes. In the battle, Gaunt's finest hour, the regiment took on and destroyed the Forces of Chaos' assault carriers. They stormed the Oligarchy Gate, the first Imperial unit to do so, and destroyed the Tower of the Plutocrat, ultimately winning the battle and earning the Hyrkans a place in the annals of Imperial glory.</p>
+                    <p>${user.description}</p>
                 <%--<div style="height: 15px"></div>--%>
                 </div>
             </div>
@@ -219,8 +221,11 @@
                     </div>
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
                         <div class="col-md-1 pull-right">
-                            <a class="btn btn-warning btn-block" href="#">Add</a>
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalAwards">
+                                Add
+                            </button>
                         </div>
+
                     </sec:authorize>
                 </div>
                 <table class="table table-bordered table-hover">
@@ -260,7 +265,9 @@
                     </div>
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
                         <div class="col-md-1 pull-right">
-                            <a class="btn btn-warning btn-block" href="#">Add</a>
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalDuty">
+                                Add
+                            </button>
                         </div>
                     </sec:authorize>
                 </div>
@@ -304,6 +311,13 @@
                     <div class="col-md-11">
                         <h2 class="card-title" style="color:#009688"><i class="fa fa-user fa-fw"></i>Events</h2>
                     </div>
+                    <sec:authorize access="hasRole('ROLE_ADMIN')">
+                        <div class="col-md-1 pull-right">
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalEvent">
+                                Add
+                            </button>
+                        </div>
+                    </sec:authorize>
                 </div>
                 <div style="height: 15px"></div>
                 <table class="table table-bordered">
@@ -351,7 +365,9 @@
                     </div>
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
                         <div class="col-md-1 pull-right">
-                            <a class="btn btn-warning btn-block" href="#">Add</a>
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalDiagnoses">
+                                Add
+                            </button>
                         </div>
                     </sec:authorize>
                 </div>
@@ -390,10 +406,132 @@
         </div>
     </div>
     <!-- End:Class Diagnoses -->
-
 </div> <!--End of Container-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalEditLabel">User Editor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Awards -->
+<div class="modal fade" id="exampleModalAwards" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalAwardsLabel">Add Award</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Duty Summary -->
+<div class="modal fade" id="exampleModalDuty" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalDutyLabel">Add Duty Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Event -->
+<div class="modal fade" id="exampleModalEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalEventLabel">Add Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Duty Events -->
+<div class="modal fade" id="exampleModalEvents" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalEventsLabel">Add Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Duty Diagnoses -->
+<div class="modal fade" id="exampleModalDiagnoses" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalDiagnosesLabel">Add Diagnose</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

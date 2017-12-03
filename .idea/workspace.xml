@@ -7,29 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ec12725-84a0-435b-a21c-88c94a296ea0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/web/UserRolesEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/UserRolesEntity.hbm.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity.war" afterPath="$PROJECT_DIR$/target/SpringSecurity.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/classes/com/mkyong/web/UsersEntity.class" afterPath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/classes/com/mkyong/web/UsersEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/web/UsersEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/mkyong/web/UsersEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/mysql.sql" afterPath="$PROJECT_DIR$/script/mysql.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-loginform-database-annotation.iml" afterPath="$PROJECT_DIR$/spring-security-loginform-database-annotation.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/web/UsersEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/web/UsersEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/UsersEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/UsersEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/recruits.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/recruits.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/hello.css" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/hello.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/classes/UsersEntity.hbm.xml" afterPath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/classes/UsersEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/classes/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/pages/hello.jsp" afterPath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/pages/hello.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/pages/recruits.jsp" afterPath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/pages/recruits.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/UsersEntity.hbm.xml" afterPath="$PROJECT_DIR$/target/classes/UsersEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/bootstrap/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/bootstrap/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/pages/user-info.jsp" afterPath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/pages/user-info.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/resources/js/bootstrap/bootstrap.js" afterPath="$PROJECT_DIR$/target/SpringSecurity/WEB-INF/resources/js/bootstrap/bootstrap.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +39,8 @@
       <file leaf-file-name="hello.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="142" column="24" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+            <state relative-caret-position="258">
+              <caret line="18" column="83" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="83" />
               <folding>
                 <element signature="n#style#0;n#header#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#3141#3147#0#HTML" expanded="true" />
@@ -81,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/script/mysql.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
-              <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+              <caret line="76" column="32" lean-forward="false" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -101,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/recruits.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -121,33 +105,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HibernateUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java">
+      <file leaf-file-name="user-info.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="76" column="50" lean-forward="false" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="50" />
+            <state relative-caret-position="177">
+              <caret line="104" column="33" lean-forward="false" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#1;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#17358#17365#1#HTML" expanded="true" />
+                <element signature="e#18268#18275#1#HTML" expanded="true" />
+                <element signature="e#19185#19192#1#HTML" expanded="true" />
+                <element signature="e#20092#20099#1#HTML" expanded="true" />
+                <element signature="e#21007#21014#1#HTML" expanded="true" />
+                <element signature="e#21934#21941#1#HTML" expanded="true" />
+                <marker date="1512321984852" expanded="false" signature="3351:3368" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="3408:3423" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="4330:4346" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="4521:4545" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="4823:4838" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="5140:5155" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="5463:5478" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="5790:5805" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="6111:6126" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="6429:6444" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="7124:7140" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="7323:7339" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="7474:7487" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="7718:7731" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="7965:7978" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="8209:8222" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="8678:8691" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="8792:8805" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="8933:8946" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="9279:9292" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="9335:9348" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="9449:9462" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="11003:11016" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="11059:11072" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="11173:11186" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="11710:11722" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="12945:12958" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="13001:13014" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="13115:13128" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="13647:13659" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="14953:14966" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="15009:15022" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="15123:15136" ph="..." />
+                <marker date="1512321984852" expanded="false" signature="15662:15674" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-info.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="80" column="62" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="53" column="61" lean-forward="false" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+            <state relative-caret-position="312">
+              <caret line="122" column="40" lean-forward="false" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,7 +186,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/hello.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -189,12 +206,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>users</find>
-      <find>POST</find>
-      <find>/welcome</find>
-      <find>--%&gt;</find>
-      <find>formSubmit</find>
-      <find>Edit</find>
       <find>logout</find>
       <find>hello-page-background</find>
       <find>+7</find>
@@ -212,9 +223,23 @@
       <find>autori</find>
       <find>aut</find>
       <find>sear</find>
+      <find>bio</find>
+      <find>Edi</find>
+      <find>Ed</find>
+      <find>Edit</find>
+      <find>Add</find>
+      <find>Add&lt;</find>
+      <find>Duty</find>
+      <find>Add D</find>
+      <find>exampleModalEvent</find>
+      <find>Biog</find>
+      <find>role</find>
+      <find>${</find>
+      <find>user.fname</find>
     </findStrings>
     <replaceStrings>
       <replace>login-page-background</replace>
+      <replace>&quot;resources/pictures/test-user-avatar.jpg&quot;</replace>
       <replace>&quot;resources/pictures/test-user-avatar.jpg&quot;</replace>
     </replaceStrings>
   </component>
@@ -247,13 +272,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/web/UsersEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/recruits.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/hello.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/staff.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp" />
         <option value="$PROJECT_DIR$/script/mysql.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp" />
       </list>
     </option>
   </component>
@@ -401,35 +426,6 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-security-loginform-database-annotation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-security-login-form-database-annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-security-loginform-database-annotation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-security-login-form-database-annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-security-loginform-database-annotation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-security-login-form-database-annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="pictures" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -679,7 +675,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65782000" />
+    <option name="totallyTimeSpent" value="68512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
@@ -704,7 +700,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33841133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33841133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -734,6 +730,110 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="142" column="24" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#header#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3141#3147#0#HTML" expanded="true" />
+            <element signature="e#3802#3808#0#HTML" expanded="true" />
+            <element signature="e#4463#4469#0#HTML" expanded="true" />
+            <element signature="e#4759#4765#0#HTML" expanded="true" />
+            <element signature="e#4863#4869#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#button#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#button#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#button#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#3;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#button#3;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/mysql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/recruits.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="53" column="61" lean-forward="false" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#1;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#17358#17365#1#HTML" expanded="true" />
+            <element signature="e#18268#18275#1#HTML" expanded="true" />
+            <element signature="e#19185#19192#1#HTML" expanded="true" />
+            <element signature="e#20092#20099#1#HTML" expanded="true" />
+            <element signature="e#21007#21014#1#HTML" expanded="true" />
+            <element signature="e#21934#21941#1#HTML" expanded="true" />
+            <marker date="1512321984852" expanded="false" signature="3351:3368" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="3408:3423" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="4330:4346" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="4521:4545" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="4823:4838" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="5140:5155" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="5463:5478" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="5790:5805" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="6111:6126" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="6429:6444" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7124:7140" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7323:7339" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7474:7487" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7718:7731" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7965:7978" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8209:8222" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8678:8691" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8792:8805" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8933:8946" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="9279:9292" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="9335:9348" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="9449:9462" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11003:11016" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11059:11072" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11173:11186" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11710:11722" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="12945:12958" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="13001:13014" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="13115:13128" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="13647:13659" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="14953:14966" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="15009:15022" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="15123:15136" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="15662:15674" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/config/core/SpringMvcInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -749,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,14 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/bootstrap/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,7 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,11 +1041,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2775">
           <caret line="185" column="7" lean-forward="false" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,7 +1110,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/hello.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1048,14 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="80" column="62" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/staff.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1354">
@@ -1066,10 +1141,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/script/mysql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="76" column="32" lean-forward="false" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/recruits.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="142" column="24" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+        <state relative-caret-position="258">
+          <caret line="18" column="83" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#header#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#3141#3147#0#HTML" expanded="true" />
@@ -1089,30 +1182,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/mysql.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/bootstrap/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/recruits.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/bootstrap/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2070">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="53" column="61" lean-forward="false" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+        <state relative-caret-position="312">
+          <caret line="122" column="40" lean-forward="false" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="104" column="33" lean-forward="false" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#1;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#17358#17365#1#HTML" expanded="true" />
+            <element signature="e#18268#18275#1#HTML" expanded="true" />
+            <element signature="e#19185#19192#1#HTML" expanded="true" />
+            <element signature="e#20092#20099#1#HTML" expanded="true" />
+            <element signature="e#21007#21014#1#HTML" expanded="true" />
+            <element signature="e#21934#21941#1#HTML" expanded="true" />
+            <marker date="1512321984852" expanded="false" signature="3351:3368" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="3408:3423" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="4330:4346" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="4521:4545" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="4823:4838" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="5140:5155" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="5463:5478" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="5790:5805" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="6111:6126" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="6429:6444" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7124:7140" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7323:7339" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7474:7487" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7718:7731" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="7965:7978" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8209:8222" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8678:8691" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8792:8805" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="8933:8946" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="9279:9292" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="9335:9348" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="9449:9462" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11003:11016" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11059:11072" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11173:11186" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="11710:11722" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="12945:12958" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="13001:13014" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="13115:13128" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="13647:13659" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="14953:14966" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="15009:15022" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="15123:15136" ph="..." />
+            <marker date="1512321984852" expanded="false" signature="15662:15674" ph="..." />
           </folding>
         </state>
       </provider>
