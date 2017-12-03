@@ -2,36 +2,7 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<html>--%>
-<%--<body>--%>
-	<%--<h1>Title : ${title}</h1>--%>
-	<%--<h1>Message : ${message}</h1>--%>
-
-	<%--<sec:authorize access="hasRole('ROLE_USER')">--%>
-		<%--<!-- For login user -->--%>
-		<%--<c:url value="/logout" var="logoutUrl" />--%>
-		<%--<form action="${logoutUrl}" method="post" id="logoutForm">--%>
-			<%--<input type="hidden" name="${_csrf.parameterName}"--%>
-				<%--value="${_csrf.token}" />--%>
-		<%--</form>--%>
-		<%--<script>--%>
-			<%--function formSubmit() {--%>
-				<%--document.getElementById("logoutForm").submit();--%>
-			<%--}--%>
-		<%--</script>--%>
-
-		<%--<c:if test="${pageContext.request.userPrincipal.name != null}">--%>
-			<%--<h2>--%>
-				<%--User : ${pageContext.request.userPrincipal.name} | <a--%>
-					<%--href="javascript:formSubmit()"> Logout</a>--%>
-			<%--</h2>--%>
-		<%--</c:if>--%>
-	<%--</sec:authorize>--%>
-<%--</body>--%>
-<%--</html>--%>
-
 <html lang="en">
-
 <head>
 
 	<meta charset="utf-8">
@@ -43,10 +14,9 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="<c:url value="resources/css/bootstrap/bootstrap.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/css/bootstrap/bootstrap.min.css" />" rel="stylesheet">
 	<link href="<c:url value="resources/js/bootstrap/bootstrap.js" />" rel="javascript">
 	<link href="<c:url value="resources/js/jquery/jquery-3.2.1.slim.min.js" />" rel="javascript">
-
+	<link href="<c:url value="resources/css/font-awesome.css" />" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="<c:url value="resources/css/hello.css" />" rel="stylesheet">
 
@@ -54,11 +24,6 @@
 
 <body>
 
-<%--<c:if test="${pageContext.request.userPrincipal.name == null}">--%>
-<%--<h1>Message : ${message}</h1>--%>
-<%--</c:if>--%>
-
-<%--<sec:authorize access="hasRole('ROLE_USER')">--%>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
@@ -68,29 +33,33 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
+
 				<li class="nav-item active">
 					<a class="nav-link" href="#">Home
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>
+				<%--<li class="nav-item">--%>
+					<%--<a class="nav-link" href="#">About</a>--%>
+				<%--</li>--%>
+				<%--<li class="nav-item">--%>
+					<%--<a class="nav-link" href="#">Services</a>--%>
+				<%--</li>--%>
+				<%--<li class="nav-item">--%>
+					<%--<a class="nav-link" href="#">Contact</a>--%>
+				<%--</li>--%>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="/recruits">Recruits</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Services</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
-				<div class="col-sm-6 col-centered">
 					<c:if test="${pageContext.request.userPrincipal.name != null}">
-						<a class="btn btn-info" href="/user?id=${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</a>
-						<a class="btn btn-warning" href="/logout">Logout</a>
+						<a class="btn btn-light" href="/user?id=${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</a>
+						<a class="btn btn-danger" href="/logout">Logout</a>
 					</c:if>
 					<c:if test="${pageContext.request.userPrincipal.name == null}">
 						<a class="btn btn-success" href="/login">Login</a>
 					</c:if>
-				</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -100,7 +69,7 @@
 <div class="container">
 
 	<!-- Jumbotron Header -->
-	<header class="jumbotron my-4">
+	<header class="jumbotron bg-dark text-white" style="margin-top: 20px; padding: 20px;">
 		<h1 class="display-3">A Warm Welcome!</h1>
 		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
 		<a href="#" class="btn btn-primary btn-lg">Call to action!</a>
@@ -109,111 +78,57 @@
 	<!-- Page Features -->
 	<div class="row text-center">
 
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body" >
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
+		<c:forEach items="${users}" var="user">
+			<div class="col-lg-4 col-md-4 mb-4">
+				<div class="card btn btn-outline-dark" >
+					<a href="/user?id=${user.username}" style="text-decoration: none">
+						<%--<img class="card-img-top" src="http://placehold.it/500x325" alt="">--%>
+						<img class="card-img-top" src="${user.photo_link}" alt="">
+					</a>
+					<div class="card-body" >
+						<h4 class="card-title">${user.fname} ${user.sname}</h4>
+						<div class="row"><!-- Title -->
+							<div class="col-sm-6 text-lg-left">
+								<p>Title:</p>
+							</div>
+							<div class="col-sm-6 text-lg-right">
+								<p>${user.rank}</p>
+							</div>
+						</div>
+						<div class="row"><!-- Category -->
+							<div class="col-sm-6 text-lg-left">
+								<p>Category:</p>
+							</div>
+							<div class="col-sm-6 text-lg-right">
+								<p>${user.category}</p>
+							</div>
+						</div>
+						<div class="row"><!-- Status -->
+							<div class="col-sm-6 text-lg-left">
+								<p>Status:</p>
+							</div>
+							<div class="col-sm-6 text-lg-right">
+								<p>${user.status}</p>
+							</div>
+						</div>
+						<div class="row"><!-- Status -->
+							<div class="col-sm-6 text-lg-left">
+								<p>Date:</p>
+							</div>
+							<div class="col-sm-6 text-lg-right">
+								<%--<p>${status}</p>--%>
+								<p>${user.date}</p>
+							</div>
+						</div>
+					</div>
+					<%--<div class="card-footer">--%>
+						<%--<a href="/user?id=${user.username}" class="btn btn-primary">View</a>--%>
+					<%--</div>--%>
 				</div>
 			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-6 mb-4">
-			<div class="card">
-				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
-				<div class="card-body">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-				</div>
-				<div class="card-footer">
-					<a href="#" class="btn btn-primary">Find Out More!</a>
-				</div>
-			</div>
-		</div>
-
+		</c:forEach>
 	</div>
+
 	<!-- /.row -->
 
 </div>

@@ -38,11 +38,20 @@
         <property name="rank">
             <column name="rank" sql-type="varchar(45)" length="45" not-null="true"/>
         </property>
+        <property name="status">
+            <column name="status" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
         <property name="phone">
             <column name="phone" sql-type="varchar(16)" length="16" not-null="true"/>
         </property>
         <property name="adress">
             <column name="adress" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="photo_link">
+            <column name="photo_link" sql-type="varchar(512)" length="512" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

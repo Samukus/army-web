@@ -1,10 +1,7 @@
 package com.mkyong.web;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Metamodel;
+import org.hibernate.*;
 import org.hibernate.query.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import javax.persistence.metamodel.EntityType;
@@ -44,9 +41,15 @@ public class HibernateUtils {
         } finally {
             session.close();
         }
+
+        List<UsersEntity> users = getUsers(2, 5);
+        for (UsersEntity user: users)
+        {
+            System.out.println(String.format("Username: %s", user.getUsername()));
+        }
     }
 
-    public static UsersEntity getUserByUsername(String Username){
+    public static UsersEntity getUserByUsername(String Username) {
         Session session = getSession();
         List<UsersEntity> UserList = session.createQuery(String.format("FROM UsersEntity where username='%s'", Username)).list();
         session.close();
@@ -55,5 +58,28 @@ public class HibernateUtils {
             return null;
 
         return UserList.get(0);
+    }
+
+    public static List<UsersEntity> getUsers(int offset, int count) {
+        Session session = getSession();
+        List<UsersEntity> UserList = session.createQuery(String.format("FROM UsersEntity", offset, count))
+                                            .setMaxResults(count)
+                                            .setFirstResult(offset)
+                                            .list();
+        session.close();
+
+        if ( UserList == null || UserList.isEmpty())
+            return null;
+
+        return UserList;
+    }
+
+    public static void updateUserByEntity(UsersEntity User) {
+        Session session = getSession();
+        Transaction trans = session.beginTransaction();
+        trans.begin();
+        session.saveOrUpdate(User);
+        trans.commit();
+        session.close();
     }
 }

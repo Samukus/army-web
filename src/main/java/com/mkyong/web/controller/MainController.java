@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.sql.DataSource;
+import java.util.Date;
 
 @Controller
 public class MainController {
@@ -28,9 +29,23 @@ public class MainController {
 	public ModelAndView defaultPage() {
 
 		ModelAndView model = new ModelAndView();
-		model.addObject("title", "Spring Security Login Form - Database Authentication");
+		model.addObject("title", "Army Web - Welcome");
 		model.addObject("message", "This is default page!");
+
+		model.addObject("users", HibernateUtils.getUsers(0,10));
+
 		model.setViewName("hello");
+		return model;
+
+	}
+
+	@RequestMapping(value = { "/recruits"}, method = RequestMethod.GET)
+	public ModelAndView recruits() {
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Army Web - Recruits");
+		model.addObject("users", HibernateUtils.getUsers(0,10));
+
+		model.setViewName("recruits");
 		return model;
 
 	}
@@ -66,8 +81,8 @@ public class MainController {
 	}
 
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public ModelAndView login(
-			@RequestParam(value = "id", required = false) String id) {
+	public ModelAndView user(
+			@RequestParam(value = "id", required = true) String id) {
 		ModelAndView model = new ModelAndView();
 //		hibernateUtils hibernateU = new hibernateUtils();
 //		Session sessionFactory = hibernateU.getSession();
@@ -93,12 +108,50 @@ public class MainController {
 			model.addObject("category", user.getCategory());
 			model.addObject("description", user.getDescription());
 			model.addObject("rank", user.getRank());
+			model.addObject("status", user.getStatus());
 			model.addObject("phone", user.getPhone());
 			model.addObject("address", user.getAdress());
+			model.addObject("email", user.getEmail());
 		}
+
 		return model;
 	}
-	
+
+//	@RequestMapping(value = "/user", method = RequestMethod.POST)
+//	public String userSubmit(@RequestParam(value = "id", required = true) String id,
+//							 @RequestParam(value = "fname", required = false) String fname,
+//							 @RequestParam(value = "sname", required = false) String sname,
+//							 @RequestParam(value = "tname", required = false) String tname,
+//							 @RequestParam(value = "date", required = false) Date date,
+//							 @RequestParam(value = "role", required = false) String role,
+//							 @RequestParam(value = "category", required = false) String category,
+//							 @RequestParam(value = "description", required = false) String description,
+//							 @RequestParam(value = "rank", required = false) String rank,
+//							 @RequestParam(value = "status", required = false) String status,
+//							 @RequestParam(value = "phone", required = false) String phone,
+//							 @RequestParam(value = "address", required = false) String address,
+//							 @RequestParam(value = "email", required = false) String email) {
+//
+//			UsersEntity user = new UsersEntity();
+//				user.setFname(fname));
+//				model.addObject("sname", user.getSname());
+//				model.addObject("tname", user.getTname());
+//				model.addObject("date", user.getDate());
+//				model.addObject("role", user.getWorkRole());
+//				model.addObject("category", user.getCategory());
+//				model.addObject("description", user.getDescription());
+//				model.addObject("rank", user.getRank());
+//				model.addObject("status", user.getStatus());
+//				model.addObject("phone", user.getPhone());
+//				model.addObject("address", user.getAdress());
+//				model.addObject("email", user.getEmail());
+//			}
+
+//	@RequestMapping(value = "/user", method = RequestMethod.POST)
+//
+//		return model;
+//	}
+
 	//for 403 access denied page
 	@RequestMapping(value = "/403", method = RequestMethod.GET)
 	public ModelAndView accesssDenied() {

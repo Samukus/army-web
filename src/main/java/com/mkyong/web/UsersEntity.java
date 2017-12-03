@@ -14,8 +14,11 @@ public class UsersEntity {
     private String category;
     private String description;
     private String rank;
+    private String status;
     private String phone;
     private String adress;
+    private String email;
+    private String photo_link;
 
     public String getUsername() {
         return username;
@@ -97,6 +100,14 @@ public class UsersEntity {
         this.description = description;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public String getRank() {
         return rank;
     }
@@ -121,6 +132,22 @@ public class UsersEntity {
         this.adress = adress;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoto_link() {
+        return photo_link;
+    }
+
+    public void setPhoto_link(String photo_link) {
+        this.photo_link = photo_link;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -139,8 +166,11 @@ public class UsersEntity {
         if (category != null ? !category.equals(that.category) : that.category != null) return false;
         if (description != null ? !description.equals(that.description) : that.description != null) return false;
         if (rank != null ? !rank.equals(that.rank) : that.rank != null) return false;
+        if (status != null ? !status.equals(that.status) : that.status != null) return false;
         if (phone != null ? !phone.equals(that.phone) : that.phone != null) return false;
         if (adress != null ? !adress.equals(that.adress) : that.adress != null) return false;
+        if (email != null ? !email.equals(that.email) : that.email != null) return false;
+        if (photo_link != null ? !photo_link.equals(that.photo_link) : that.photo_link != null) return false;
 
         return true;
     }
@@ -158,8 +188,11 @@ public class UsersEntity {
         result = 31 * result + (category != null ? category.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (rank != null ? rank.hashCode() : 0);
+        result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (adress != null ? adress.hashCode() : 0);
+        result = 31 * result + (photo_link != null ? photo_link.hashCode() : 0);
+        result = 31 * result + (photo_link != null ? photo_link.hashCode() : 0);
         return result;
     }
 }

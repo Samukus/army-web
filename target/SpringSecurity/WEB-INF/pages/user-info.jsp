@@ -51,7 +51,7 @@
                 </li>
                 <div class="col-sm-6 col-centered">
                     <c:if test="${pageContext.request.userPrincipal.name != null}">
-                        <a class="btn btn-info" href="/user?${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</a>
+                        <a class="btn btn-info" href="/user?id=${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</a>
                         <a class="btn btn-warning" href="/logout">Logout</a>
                     </c:if>
                     <c:if test="${pageContext.request.userPrincipal.name == null}">
@@ -70,7 +70,7 @@
 
             <div class="row" style="margin-top:0px;">
                 <div class="col-md-9">
-                    <h2 style="font-size:28px"><strong>Ibram Gaunt</strong></h2>
+                    <h2 style="font-size:28px"><strong>${fname} ${sname}</strong></h2>
                 </div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <div class="col-md-3">
@@ -88,14 +88,14 @@
             </div>
 
             <div class="col-sm-6"> <!-- Rank & Qualifications -->
-                <h5 style="color:#3AAA64">Commissar, <small>Military commissariat of the city Novosibirsk</small></h5>
-                <p>Ibram Gaunt</p>
+                <h5 style="color:#3AAA64">${role} <small></small></h5>
+                <p>${fname} ${sname} ${tname}</p>
                 <div class="row" style="margin-top: 0px"><!-- Title -->
                     <div class="col-sm-3">
                         <p>Title:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>The retired general</p>
+                        <p>${rank}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Address -->
@@ -103,7 +103,7 @@
                         <p>Address:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>Novosibirsk, Trudovaya, 13</p>
+                        <p>${address}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Category -->
@@ -111,7 +111,7 @@
                         <p>Category:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>A+</p>
+                        <p>${category}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Status -->
@@ -119,7 +119,7 @@
                         <p>Status:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>retired</p>
+                        <p>${status}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Email -->
@@ -127,7 +127,7 @@
                         <p>Email:</p>
                     </div>
                     <div class="col-sm-9">
-                        <p>t_dickrage@army.com</p>
+                        <p>${email}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 0px"><!-- Date of Birth -->
@@ -136,16 +136,16 @@
                     </div>
                     <div class="well">
                         <div class="form-group">
-                            <input type="date" class="form-control" id="exampleInputDOB1" value="2013-01-08" readonly="readonly">
+                            <input type="date" class="form-control" id="exampleInputDOB1" value="${date}" readonly="readonly">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 text-center"> <!-- Phone & Social -->
-                <span class="number" style="font-size:18px">Phone:<strong>+8801732226402</strong></span>
+                <span class="number" style="font-size:18px">Phone:<strong>${phone}</strong></span>
                 <div class="button" style="padding-top:18px">
-                    <a href="mailto:ahmkctg@yahoo.com" class="btn btn-outline-success btn-block">Send Email</a>
+                    <a href="mailto:${email}" class="btn btn-outline-success btn-block">Send Email</a>
                 </div>
                 <div class="social-icons" style="padding-top:18px">
                     <a href="#">

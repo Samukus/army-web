@@ -140,15 +140,27 @@ username</ColNames>
       <Position>11</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="37" parent="9" name="phone">
+    <column id="37" parent="9" name="status">
       <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="38" parent="9" name="phone">
+      <Position>13</Position>
       <DataType>varchar(16)|0</DataType>
     </column>
-    <column id="38" parent="9" name="adress">
-      <Position>13</Position>
+    <column id="39" parent="9" name="adress">
+      <Position>14</Position>
       <DataType>varchar(128)|0</DataType>
     </column>
-    <key id="39" parent="9" name="PRIMARY">
+    <column id="40" parent="9" name="email">
+      <Position>15</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="41" parent="9" name="photo_link">
+      <Position>16</Position>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <key id="42" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
       <Primary>1</Primary>
