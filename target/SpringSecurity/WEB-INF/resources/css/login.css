@@ -1,0 +1,63 @@
+	/*.error {*/
+		/*padding: 15px;*/
+		/*margin-bottom: 20px;*/
+		/*border: 1px solid transparent;*/
+		/*border-radius: 4px;*/
+		/*color: #a94442;*/
+		/*background-color: #f2dede;*/
+		/*border-color: #ebccd1;*/
+	/*}*/
+
+	/*.msg {*/
+		/*padding: 15px;*/
+		/*margin-bottom: 20px;*/
+		/*border: 1px solid transparent;*/
+		/*border-radius: 4px;*/
+		/*color: #31708f;*/
+		/*background-color: #d9edf7;*/
+		/*border-color: #bce8f1;*/
+	/*}*/
+
+	/*#login-box {*/
+		/*width: 300px;*/
+		/*padding: 20px;*/
+		/*margin: 100px auto;*/
+		/*background: #fff;*/
+		/*-webkit-border-radius: 2px;*/
+		/*-moz-border-radius: 2px;*/
+		/*border: 1px solid #000;*/
+	/*}*/
+
+	@import url(http://fonts.googleapis.com/css?family=Raleway:600);
+	body {
+		background: url("../pictures/login-page-background.jpg") no-repeat center center fixed;
+		/*background: url("../pictures/login-page-background.jpg") no-repeat center center fixed;*/
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		margin:0;
+		padding:0;
+		height: 100%;
+		width: 100%;
+	}
+	span {
+		color:#fff;
+		font-family: 'Raleway', sans-serif;
+		font-size:18px;
+	}
+	p {
+		color:#fff;
+		font-family: 'Raleway', sans-serif;
+		font-size:10px;
+	}
+	.col-centered {
+		background: #1b1e21;
+		float: none;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+	.wrath-content-box {
+		padding: 15px;
+	}
