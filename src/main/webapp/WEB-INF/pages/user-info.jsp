@@ -229,6 +229,7 @@
 
                     </sec:authorize>
                 </div>
+                <c:if test="${awards != null}">
                 <table class="table table-bordered table-hover">
                     <thead class="thead-default">
                     <tr>
@@ -237,14 +238,20 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${awards}" var="item">
+                    <c:forEach items="${awards}" var="award">
                         <tr>
-                            <td>${item.date}</td>
-                            <td>${item.awardName}</td>
+                            <td>${award.date}</td>
+                            <td>${award.awardName}</td>
                         </tr>
                     </c:forEach>
                     </tbody>
                 </table>
+                </c:if>
+                <c:if test="${awards == null}">
+                    <div class="alert alert-info col-md-2">
+                        No Awards
+                    </div>
+                </c:if>
             </div>
         </div>
     </div>
@@ -267,7 +274,8 @@
                     </sec:authorize>
                 </div>
                 <div style="height: 15px"></div>
-                <table class="table table-bordered">
+                <c:if test="${dyties != null}">
+                <table class="table table-bordered table-hover">
                     <thead class="thead-default">
                     <tr>
                         <th>Year</th>
@@ -276,7 +284,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${duties}" var="item">
+                    <c:forEach items="${dyties}" var="item">
                         <tr>
                             <td>${item.dateStart}-${item.dateEnd}</td>
                             <td>${item.rank}</td>
@@ -285,6 +293,12 @@
                     </c:forEach>
                     </tbody>
                 </table>
+                </c:if>
+                <c:if test="${dyties == null}">
+                    <div class="alert alert-info col-md-2">
+                        No Duty Summaries
+                    </div>
+                </c:if>
             </div>
         </div>
     </div>
@@ -307,7 +321,8 @@
                     </sec:authorize>
                 </div>
                 <div style="height: 15px"></div>
-                <table class="table table-bordered">
+                <c:if test="${events != null}">
+                <table class="table table-bordered table-hover">
                     <thead class="thead-default" >
                     <tr>
                         <th>Date</th>
@@ -323,6 +338,12 @@
                     </c:forEach>
                     </tbody>
                 </table>
+                </c:if>
+                <c:if test="${events == null}">
+                    <div class="alert alert-info col-md-2">
+                        No Events
+                    </div>
+                </c:if>
             </div>
         </div>
     </div>
@@ -345,7 +366,8 @@
                     </sec:authorize>
                 </div>
                 <div style="height: 15px"></div>
-                <table class="table table-bordered">
+                <c:if test="${diagnoses != null}">
+                <table class="table table-bordered table-hover">
                     <thead class="thead-default" >
                     <tr>
                         <th>Date</th>
@@ -363,6 +385,12 @@
                     </c:forEach>
                     </tbody>
                 </table>
+                </c:if>
+                <c:if test="${diagnoses == null}">
+                    <div class="alert alert-info col-md-2">
+                        No Diagnoses
+                    </div>
+                </c:if>
             </div>
         </div>
     </div>
@@ -502,13 +530,33 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <%--@elvariable id="Award" type="com.mkyong.web.AwardsEntity"--%>
+            <form:form role="form" method = "POST" action="/addAward" modelAttribute="Award">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <input type="hidden" name="username" value="${user.username}"/>
+                <input type="hidden" name="password" value="${user.password}"/>
+                <input type="hidden" name="photoLink" value="${user.photoLink}"/>
+                <input type="hidden" name="enabled" value="${user.enabled}"/>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Date:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="date" name="date" class="form-control" value="${user.date}">
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Award Name:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="awardName" class="form-control" placeholder="Award Name">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form:form>
         </div>
     </div>
 </div>

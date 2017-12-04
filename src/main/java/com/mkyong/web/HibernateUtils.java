@@ -42,8 +42,8 @@ public class HibernateUtils {
             session.close();
         }
 
-        List<UsersEntity> users = getUsersByRole("ROLE_ADMIN");
-        for (UsersEntity user: users)
+        List<DutiesEntity> users = getDutiesByUsername("mkyong");
+        for (DutiesEntity user: users)
         {
             System.out.println(String.format("Username: %s", user.getUsername()));
         }
@@ -87,14 +87,14 @@ public class HibernateUtils {
         return UserList;
     }
 
-    public static void updateUserByEntity(UsersEntity User) {
-        Session session = getSession();
-        Transaction trans = session.getTransaction();
-        trans.begin();
-        session.saveOrUpdate(User);
-        trans.commit();
-        session.close();
-    }
+//    public static void updateUserByEntity(UsersEntity User) {
+//        Session session = getSession();
+//        Transaction trans = session.getTransaction();
+//        trans.begin();
+//        session.saveOrUpdate(User);
+//        trans.commit();
+//        session.close();
+//    }
 
     public static List<AwardsEntity> getAwardsByUsername(String Username) {
         Session session = getSession();
@@ -122,7 +122,7 @@ public class HibernateUtils {
 
     public static List<DiagnosesEntity> getDiagnosesByUsername(String Username) {
         Session session = getSession();
-        List<DiagnosesEntity> List = session.createQuery(String.format("FROM EventsEntity where username='%s'", Username))
+        List<DiagnosesEntity> List = session.createQuery(String.format("FROM DiagnosesEntity where username='%s'", Username))
                 .list();
         session.close();
 
@@ -134,7 +134,7 @@ public class HibernateUtils {
 
     public static List<DutiesEntity> getDutiesByUsername(String Username) {
         Session session = getSession();
-        List<DutiesEntity> List = session.createQuery(String.format("FROM EventsEntity where username='%s'", Username))
+        List<DutiesEntity> List = session.createQuery(String.format("FROM DutiesEntity where username='%s'", Username))
                 .list();
         session.close();
 
@@ -142,5 +142,14 @@ public class HibernateUtils {
             return null;
 
         return List;
+    }
+
+    public static void updateByEntity(Object Entity) {
+        Session session = getSession();
+        Transaction trans = session.getTransaction();
+        trans.begin();
+        session.saveOrUpdate(Entity);
+        trans.commit();
+        session.close();
     }
 }

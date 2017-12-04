@@ -1,5 +1,6 @@
 package com.mkyong.web.controller;
 
+import com.mkyong.web.AwardsEntity;
 import com.mkyong.web.HibernateUtils;
 import com.mkyong.web.UsersEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -172,8 +173,21 @@ public class MainController {
 	@RequestMapping(value = "/changeuser", method = RequestMethod.POST)
 	public ModelAndView changeuser(@ModelAttribute("User") @Validated UsersEntity user)
 	{
-		HibernateUtils.updateUserByEntity(user);
+		HibernateUtils.updateByEntity(user);
 		ModelAndView model = new ModelAndView(new RedirectView(String.format("/user?id=%s", user.getUsername())));
+
+		return model;
+	}
+
+	// add award
+	// 1. @ModelAttribute bind form value
+	// 2. @Validated form validator
+	// 3. RedirectAttributes for flash value
+	@RequestMapping(value = "/addAward", method = RequestMethod.POST)
+	public ModelAndView changeuser(@ModelAttribute("Award") @Validated AwardsEntity Award)
+	{
+		HibernateUtils.updateByEntity(Award);
+		ModelAndView model = new ModelAndView(new RedirectView(String.format("/user?id=%s", Award.getUsername())));
 
 		return model;
 	}

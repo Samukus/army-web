@@ -3,7 +3,7 @@ package com.mkyong.web;
 import java.sql.Date;
 
 public class AwardsEntity {
-    private int awardId;
+    private int awardId = 0;
     private String username;
     private Date date;
     private String awardName;

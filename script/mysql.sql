@@ -28,13 +28,6 @@ CREATE TABLE user_roles (
   KEY fk_username_idx (username),
   CONSTRAINT fk_username FOREIGN KEY (username) REFERENCES users (username));
 
-CREATE TABLE events (
-  event_id int(11) NOT NULL AUTO_INCREMENT,
-  username varchar(45) NOT NULL,
-  date date,
-  description varchar(1024),
-  PRIMARY KEY (event_id));
-
 CREATE TABLE awards (
   award_id int(11) NOT NULL AUTO_INCREMENT,
   username varchar(45) NOT NULL,
@@ -58,6 +51,13 @@ CREATE TABLE diagnoses (
   name varchar(1024),
   description varchar(1024),
   PRIMARY KEY (award_id));
+
+CREATE TABLE events (
+  event_id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(45) NOT NULL,
+  date date,
+  description varchar(1024),
+  PRIMARY KEY (event_id));
 
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
@@ -123,3 +123,44 @@ INSERT INTO awards (username, date, award_name)
 VALUES ('mkyong', "1994-01-01", "Test Award Name #2");
 INSERT INTO awards (username, date, award_name)
 VALUES ('mkyong', "1994-01-01", "Test Award Name )3");
+
+INSERT INTO duties (username, date_start, date_end, rank, military_unit)
+VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
+INSERT INTO duties (username, date_start, date_end, rank, military_unit)
+VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
+INSERT INTO duties (username, date_start, date_end, rank, military_unit)
+VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
+INSERT INTO duties (username, date_start, date_end, rank, military_unit)
+VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
+INSERT INTO duties (username, date_start, date_end, rank, military_unit)
+VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
+
+INSERT INTO diagnoses (username, date, name, description)
+VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
+INSERT INTO diagnoses (username, date, name, description)
+VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
+INSERT INTO diagnoses (username, date, name, description)
+VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
+INSERT INTO diagnoses (username, date, name, description)
+VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
+INSERT INTO diagnoses (username, date, name, description)
+VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
+INSERT INTO diagnoses (username, date, name, description)
+VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
+
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
+INSERT INTO events (username, date, description)
+VALUES ('mkyong', "1994-01-01", "Test Description");
