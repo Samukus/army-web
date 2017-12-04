@@ -95,4 +95,52 @@ public class HibernateUtils {
         trans.commit();
         session.close();
     }
+
+    public static List<AwardsEntity> getAwardsByUsername(String Username) {
+        Session session = getSession();
+        List<AwardsEntity> AwardsList = session.createQuery(String.format("FROM AwardsEntity where username='%s'", Username))
+                .list();
+        session.close();
+
+        if ( AwardsList == null || AwardsList.isEmpty())
+            return null;
+
+        return AwardsList;
+    }
+
+    public static List<EventsEntity> getEventsByUsername(String Username) {
+        Session session = getSession();
+        List<EventsEntity> List = session.createQuery(String.format("FROM EventsEntity where username='%s'", Username))
+                .list();
+        session.close();
+
+        if ( List == null || List.isEmpty())
+            return null;
+
+        return List;
+    }
+
+    public static List<DiagnosesEntity> getDiagnosesByUsername(String Username) {
+        Session session = getSession();
+        List<DiagnosesEntity> List = session.createQuery(String.format("FROM EventsEntity where username='%s'", Username))
+                .list();
+        session.close();
+
+        if ( List == null || List.isEmpty())
+            return null;
+
+        return List;
+    }
+
+    public static List<DutiesEntity> getDutiesByUsername(String Username) {
+        Session session = getSession();
+        List<DutiesEntity> List = session.createQuery(String.format("FROM EventsEntity where username='%s'", Username))
+                .list();
+        session.close();
+
+        if ( List == null || List.isEmpty())
+            return null;
+
+        return List;
+    }
 }

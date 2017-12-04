@@ -120,6 +120,10 @@ public class MainController {
 			model.addObject("email", user.getEmail());
 
 			model.addObject("user", user);
+			model.addObject("awards",    HibernateUtils.getAwardsByUsername(user.getUsername()));
+			model.addObject("dyties",    HibernateUtils.getDutiesByUsername(user.getUsername()));
+			model.addObject("events",    HibernateUtils.getEventsByUsername(user.getUsername()));
+			model.addObject("diagnoses", HibernateUtils.getDiagnosesByUsername(user.getUsername()));
 		}
 
 		return model;

@@ -9,6 +9,11 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password">2233</property>
+
+        <mapping resource="AwardsEntity.hbm.xml"/>
+        <mapping resource="DiagnosesEntity.hbm.xml"/>
+        <mapping resource="DutiesEntity.hbm.xml"/>
+        <mapping resource="EventsEntity.hbm.xml"/>
         <mapping resource="UserRolesEntity.hbm.xml"/>
         <mapping resource="UsersEntity.hbm.xml"/>
 

@@ -237,18 +237,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>2006</td>
-                        <td>Cloud & Parallel Computing</td>
-                    </tr>
-                    <tr>
-                        <td>2009</td>
-                        <td>Big Data Analysis and Management</td>
-                    </tr>
-                    <tr>
-                        <td>2013</td>
-                        <td>High-performance and Low-Power Real-Time Systems</td>
-                    </tr>
+                    <c:forEach items="${awards}" var="item">
+                        <tr>
+                            <td>${item.date}</td>
+                            <td>${item.awardName}</td>
+                        </tr>
+                    </c:forEach>
                     </tbody>
                 </table>
             </div>
@@ -282,21 +276,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>2006-Present</td>
-                        <td>Associate Professor</td>
-                        <td>Jatiya Kabi Kazi Nazrul Islam University</td>
-                    </tr>
-                    <tr>
-                        <td>2004-2006</td>
-                        <td>Lecturer</td>
-                        <td>Brac University</td>
-                    </tr>
-                    <tr>
-                        <td>2003-2004</td>
-                        <td>Senior System Administrator</td>
-                        <td>Axle Technologies</td>
-                    </tr>
+                    <c:forEach items="${duties}" var="item">
+                        <tr>
+                            <td>${item.dateStart}-${item.dateEnd}</td>
+                            <td>${item.rank}</td>
+                            <td>${item.militaryUnit}</td>
+                        </tr>
+                    </c:forEach>
                     </tbody>
                 </table>
             </div>
@@ -329,26 +315,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>CSE-121</td>
-                        <td>Structured Programming</td>
-                    </tr>
-                    <tr>
-                        <td>CSE-221</td>
-                        <td>Algorithms</td>
-                    </tr>
-                    <tr>
-                        <td>CSE-305</td>
-                        <td>Theory of Computation</td>
-                    </tr>
-                    <tr>
-                        <td>CSE-405</td>
-                        <td>Network Security</td>
-                    </tr>
-                    <tr>
-                        <td>CSE-439</td>
-                        <td>Digital Image Processing</td>
-                    </tr>
+                    <c:forEach items="${events}" var="item">
+                        <tr>
+                            <td>${item.date}</td>
+                            <td>${item.description}</td>
+                        </tr>
+                    </c:forEach>
                     </tbody>
                 </table>
             </div>
@@ -382,31 +354,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>${user.date}</td>
-                        <td>CSE-121</td>
-                        <td>Structured Programming</td>
-                    </tr>
-                    <tr>
-                        <td>${user.date}</td>
-                        <td>CSE-221</td>
-                        <td>Algorithms</td>
-                    </tr>
-                    <tr>
-                        <td>${user.date}</td>
-                        <td>CSE-305</td>
-                        <td>Theory of Computation</td>
-                    </tr>
-                    <tr>
-                        <td>${user.date}</td>
-                        <td>CSE-405</td>
-                        <td>Network Security</td>
-                    </tr>
-                    <tr>
-                        <td>${user.date}</td>
-                        <td>CSE-439</td>
-                        <td>Digital Image Processing</td>
-                    </tr>
+                    <c:forEach items="${diagnoses}" var="item">
+                        <tr>
+                            <td>${item.date}</td>
+                            <td>${item.name}</td>
+                            <td>${item.description}</td>
+                        </tr>
+                    </c:forEach>
                     </tbody>
                 </table>
             </div>

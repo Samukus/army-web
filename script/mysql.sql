@@ -114,3 +114,12 @@ INSERT INTO user_roles (username, role)
 VALUES ('mkyong', 'ROLE_ADMIN');
 INSERT INTO user_roles (username, role)
 VALUES ('alex', 'ROLE_USER');
+
+INSERT INTO awards (username, date, award_name)
+VALUES ('mkyong', "1994-01-01", "Test Award Name #0");
+INSERT INTO awards (username, date, award_name)
+VALUES ('mkyong', "1994-01-01", "Test Award Name #1");
+INSERT INTO awards (username, date, award_name)
+VALUES ('mkyong', "1994-01-01", "Test Award Name #2");
+INSERT INTO awards (username, date, award_name)
+VALUES ('mkyong', "1994-01-01", "Test Award Name )3");

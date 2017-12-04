@@ -2,7 +2,6 @@ package com.mkyong.web;
 
 public class UserRolesEntity {
     private int userRoleId;
-    private String username;
     private String role;
 
     public int getUserRoleId() {
@@ -11,14 +10,6 @@ public class UserRolesEntity {
 
     public void setUserRoleId(int userRoleId) {
         this.userRoleId = userRoleId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getRole() {
@@ -37,7 +28,6 @@ public class UserRolesEntity {
         UserRolesEntity that = (UserRolesEntity) o;
 
         if (userRoleId != that.userRoleId) return false;
-        if (username != null ? !username.equals(that.username) : that.username != null) return false;
         if (role != null ? !role.equals(that.role) : that.role != null) return false;
 
         return true;
@@ -46,7 +36,6 @@ public class UserRolesEntity {
     @Override
     public int hashCode() {
         int result = userRoleId;
-        result = 31 * result + (username != null ? username.hashCode() : 0);
         result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
     }
