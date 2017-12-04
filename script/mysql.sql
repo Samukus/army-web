@@ -28,6 +28,37 @@ CREATE TABLE user_roles (
   KEY fk_username_idx (username),
   CONSTRAINT fk_username FOREIGN KEY (username) REFERENCES users (username));
 
+CREATE TABLE events (
+  event_id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(45) NOT NULL,
+  date date,
+  description varchar(1024),
+  PRIMARY KEY (event_id));
+
+CREATE TABLE awards (
+  award_id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(45) NOT NULL,
+  date date,
+  award_name varchar(1024),
+  PRIMARY KEY (award_id));
+
+CREATE TABLE duties (
+  duty_id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(45) NOT NULL,
+  date_start date,
+  date_end date,
+  rank varchar(64),
+  military_unit varchar(1024),
+  PRIMARY KEY (duty_id));
+
+CREATE TABLE diagnoses (
+  award_id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(45) NOT NULL,
+  date date,
+  name varchar(1024),
+  description varchar(1024),
+  PRIMARY KEY (award_id));
+
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
 VALUES ('mkyong','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");

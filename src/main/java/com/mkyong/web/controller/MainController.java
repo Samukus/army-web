@@ -2,22 +2,21 @@ package com.mkyong.web.controller;
 
 import com.mkyong.web.HibernateUtils;
 import com.mkyong.web.UsersEntity;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.sql.DataSource;
-import java.util.Date;
 
 @Controller
 public class MainController {
@@ -160,6 +159,20 @@ public class MainController {
 //
 //		return model;
 //	}
+
+
+	// save or update user
+	// 1. @ModelAttribute bind form value
+	// 2. @Validated form validator
+	// 3. RedirectAttributes for flash value
+	@RequestMapping(value = "/changeuser", method = RequestMethod.POST)
+	public ModelAndView changeuser(@ModelAttribute("User") @Validated UsersEntity user)
+	{
+		HibernateUtils.updateUserByEntity(user);
+		ModelAndView model = new ModelAndView(new RedirectView(String.format("/user?id=%s", user.getUsername())));
+
+		return model;
+	}
 
 	//for 403 access denied page
 	@RequestMapping(value = "/403", method = RequestMethod.GET)

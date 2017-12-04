@@ -77,7 +77,7 @@ public class HibernateUtils {
     public static List<UsersEntity> getUsersByRole(String role) {
         Session session = getSession();
         List<UsersEntity> UserList = session.createQuery(String
-                .format("select user from UsersEntity user, UserRolesEntity role where role.role='%s' and user.username=role.username", role))
+                .format("select user from UsersEntity user,UserRolesEntity role where role.role='%s' and user.username=role.username", role))
                 .list();
         session.close();
 
@@ -89,7 +89,7 @@ public class HibernateUtils {
 
     public static void updateUserByEntity(UsersEntity User) {
         Session session = getSession();
-        Transaction trans = session.beginTransaction();
+        Transaction trans = session.getTransaction();
         trans.begin();
         session.saveOrUpdate(User);
         trans.commit();

@@ -8,6 +8,7 @@
 <%@taglib prefix="sec"
           uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -375,28 +376,34 @@
                 <table class="table table-bordered">
                     <thead class="thead-default" >
                     <tr>
+                        <th>Date</th>
                         <th>Diagnose</th>
                         <th>Description</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
+                        <td>${user.date}</td>
                         <td>CSE-121</td>
                         <td>Structured Programming</td>
                     </tr>
                     <tr>
+                        <td>${user.date}</td>
                         <td>CSE-221</td>
                         <td>Algorithms</td>
                     </tr>
                     <tr>
+                        <td>${user.date}</td>
                         <td>CSE-305</td>
                         <td>Theory of Computation</td>
                     </tr>
                     <tr>
+                        <td>${user.date}</td>
                         <td>CSE-405</td>
                         <td>Network Security</td>
                     </tr>
                     <tr>
+                        <td>${user.date}</td>
                         <td>CSE-439</td>
                         <td>Digital Image Processing</td>
                     </tr>
@@ -410,7 +417,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document" style="max-width: 1200px;">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalEditLabel">User Editor</h5>
@@ -418,13 +425,115 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <%--@elvariable id="User" type="com.mkyong.web.UsersEntity"--%>
+            <form:form role="form" method = "POST" action="/changeuser" modelAttribute="User">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <input type="hidden" name="username" value="${user.username}"/>
+                <input type="hidden" name="password" value="${user.password}"/>
+                <input type="hidden" name="photoLink" value="${user.photoLink}"/>
+                <input type="hidden" name="enabled" value="${user.enabled}"/>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>First Name:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="fname" class="form-control" value="${user.fname}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Second Name:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="sname" class="form-control" value="${user.sname}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Third Name:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="tname" class="form-control" value="${user.tname}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>WorkRole:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="workRole" class="form-control" value="${user.workRole}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Title:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="rank" class="form-control" value="${user.rank}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Address:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="adress" class="form-control" value="${user.adress}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Category:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="category" class="form-control" value="${user.category}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Status:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="status" class="form-control" value="${user.status}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Email:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="email" class="form-control" value="${user.email}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Phone:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="phone" class="form-control" value="${user.phone}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Date:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="date" name="date" class="form-control" value="${user.date}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Biography:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="description" class="form-control" style="padding-bottom: 100px;" value="${user.description}">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form:form>
         </div>
     </div>
 </div>
