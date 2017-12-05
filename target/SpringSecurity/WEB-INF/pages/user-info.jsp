@@ -88,9 +88,9 @@
                                 User Edit
                             </button>
                         </div>
-                        <%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--%>
+                            <%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--%>
                             <%--Launch demo modal--%>
-                        <%--</button>--%>
+                            <%--</button>--%>
                     </div>
                 </sec:authorize>
             </div>
@@ -205,7 +205,7 @@
 
                 <div style="padding: 10px">
                     <p>${user.description}</p>
-                <%--<div style="height: 15px"></div>--%>
+                    <%--<div style="height: 15px"></div>--%>
                 </div>
             </div>
         </div>
@@ -230,22 +230,22 @@
                     </sec:authorize>
                 </div>
                 <c:if test="${awards != null}">
-                <table class="table table-bordered table-hover">
-                    <thead class="thead-default">
-                    <tr>
-                        <th>Year</th>
-                        <th>Name of the award</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach items="${awards}" var="award">
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-default">
                         <tr>
-                            <td>${award.date}</td>
-                            <td>${award.awardName}</td>
+                            <th>Year</th>
+                            <th>Name of the award</th>
                         </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        <c:forEach items="${awards}" var="award">
+                            <tr>
+                                <td>${award.date}</td>
+                                <td>${award.awardName}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
                 </c:if>
                 <c:if test="${awards == null}">
                     <div class="alert alert-info col-md-2">
@@ -275,24 +275,24 @@
                 </div>
                 <div style="height: 15px"></div>
                 <c:if test="${dyties != null}">
-                <table class="table table-bordered table-hover">
-                    <thead class="thead-default">
-                    <tr>
-                        <th>Year</th>
-                        <th>Rank</th>
-                        <th>Military unit</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach items="${dyties}" var="item">
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-default">
                         <tr>
-                            <td>${item.dateStart}-${item.dateEnd}</td>
-                            <td>${item.rank}</td>
-                            <td>${item.militaryUnit}</td>
+                            <th>Year</th>
+                            <th>Rank</th>
+                            <th>Military unit</th>
                         </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        <c:forEach items="${dyties}" var="item">
+                            <tr>
+                                <td>${item.dateStart}-${item.dateEnd}</td>
+                                <td>${item.rank}</td>
+                                <td>${item.militaryUnit}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
                 </c:if>
                 <c:if test="${dyties == null}">
                     <div class="alert alert-info col-md-2">
@@ -322,22 +322,22 @@
                 </div>
                 <div style="height: 15px"></div>
                 <c:if test="${events != null}">
-                <table class="table table-bordered table-hover">
-                    <thead class="thead-default" >
-                    <tr>
-                        <th>Date</th>
-                        <th>Description</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach items="${events}" var="item">
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-default" >
                         <tr>
-                            <td>${item.date}</td>
-                            <td>${item.description}</td>
+                            <th>Date</th>
+                            <th>Description</th>
                         </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        <c:forEach items="${events}" var="item">
+                            <tr>
+                                <td>${item.date}</td>
+                                <td>${item.description}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
                 </c:if>
                 <c:if test="${events == null}">
                     <div class="alert alert-info col-md-2">
@@ -367,24 +367,24 @@
                 </div>
                 <div style="height: 15px"></div>
                 <c:if test="${diagnoses != null}">
-                <table class="table table-bordered table-hover">
-                    <thead class="thead-default" >
-                    <tr>
-                        <th>Date</th>
-                        <th>Diagnose</th>
-                        <th>Description</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach items="${diagnoses}" var="item">
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-default" >
                         <tr>
-                            <td>${item.date}</td>
-                            <td>${item.name}</td>
-                            <td>${item.description}</td>
+                            <th>Date</th>
+                            <th>Diagnose</th>
+                            <th>Description</th>
                         </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        <c:forEach items="${diagnoses}" var="item">
+                            <tr>
+                                <td>${item.date}</td>
+                                <td>${item.name}</td>
+                                <td>${item.description}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
                 </c:if>
                 <c:if test="${diagnoses == null}">
                     <div class="alert alert-info col-md-2">
@@ -418,7 +418,7 @@
                     <div class="col-md-2">
                         <h5>First Name:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="fname" class="form-control" value="${user.fname}">
                     </div>
                 </div>
@@ -426,7 +426,7 @@
                     <div class="col-md-2">
                         <h5>Second Name:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="sname" class="form-control" value="${user.sname}">
                     </div>
                 </div>
@@ -434,7 +434,7 @@
                     <div class="col-md-2">
                         <h5>Third Name:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="tname" class="form-control" value="${user.tname}">
                     </div>
                 </div>
@@ -442,7 +442,7 @@
                     <div class="col-md-2">
                         <h5>WorkRole:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="workRole" class="form-control" value="${user.workRole}">
                     </div>
                 </div>
@@ -450,7 +450,7 @@
                     <div class="col-md-2">
                         <h5>Title:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="rank" class="form-control" value="${user.rank}">
                     </div>
                 </div>
@@ -458,7 +458,7 @@
                     <div class="col-md-2">
                         <h5>Address:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="adress" class="form-control" value="${user.adress}">
                     </div>
                 </div>
@@ -466,7 +466,7 @@
                     <div class="col-md-2">
                         <h5>Category:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="category" class="form-control" value="${user.category}">
                     </div>
                 </div>
@@ -474,7 +474,7 @@
                     <div class="col-md-2">
                         <h5>Status:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="status" class="form-control" value="${user.status}">
                     </div>
                 </div>
@@ -482,7 +482,7 @@
                     <div class="col-md-2">
                         <h5>Email:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="email" class="form-control" value="${user.email}">
                     </div>
                 </div>
@@ -490,7 +490,7 @@
                     <div class="col-md-2">
                         <h5>Phone:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="phone" class="form-control" value="${user.phone}">
                     </div>
                 </div>
@@ -498,7 +498,7 @@
                     <div class="col-md-2">
                         <h5>Date:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="date" name="date" class="form-control" value="${user.date}">
                     </div>
                 </div>
@@ -506,7 +506,7 @@
                     <div class="col-md-2">
                         <h5>Biography:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" name="description" class="form-control" style="padding-bottom: 100px;" value="${user.description}">
                     </div>
                 </div>
@@ -522,10 +522,10 @@
 
 <!-- Modal Awards -->
 <div class="modal fade" id="exampleModalAwards" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document" style="max-width: 600px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalAwardsLabel">Add Award</h5>
+                <h5 class="modal-title" id="exampleModalAwardLabel">Add award</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -534,21 +534,20 @@
             <form:form role="form" method = "POST" action="/addAward" modelAttribute="Award">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <input type="hidden" name="username" value="${user.username}"/>
-                <input type="hidden" name="password" value="${user.password}"/>
-                <input type="hidden" name="photoLink" value="${user.photoLink}"/>
-                <input type="hidden" name="enabled" value="${user.enabled}"/>
                 <div class="row form-group" style="margin: 15px">
                     <div class="col-md-2">
                         <h5>Date:</h5>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="date" name="date" class="form-control" value="${user.date}">
                     </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
                     <div class="col-md-2">
                         <h5>Award Name:</h5>
                     </div>
-                    <div class="col-md-8">
-                        <input type="text" name="awardName" class="form-control" placeholder="Award Name">
+                    <div class="col-md-10">
+                        <input type="text" name="awardName" class="form-control" style="padding-bottom: 100px;" placeholder="Type Award Name here">
                     </div>
                 </div>
 
@@ -563,84 +562,140 @@
 
 <!-- Modal Duty Summary -->
 <div class="modal fade" id="exampleModalDuty" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document" style="max-width: 600px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalDutyLabel">Add Duty Event</h5>
+                <h5 class="modal-title">Add Duty Summary</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <%--@elvariable id="Award" type="com.mkyong.web.AwardsEntity"--%>
+            <form:form role="form" method = "POST" action="/addAward" modelAttribute="Award">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <input type="hidden" name="username" value="${user.username}"/>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Start Date:</h5>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="date" name="date" class="form-control" value="${user.date}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>End Date:</h5>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="date" name="date" class="form-control" value="${user.date}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Rank:</h5>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="awardName" class="form-control" placeholder="Type Rank here">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Military unit:</h5>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="awardName" class="form-control" style="padding-bottom: 100px;" placeholder="Type Military unit here">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form:form>
         </div>
     </div>
 </div>
 
 <!-- Modal Event -->
 <div class="modal fade" id="exampleModalEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document" style="max-width: 600px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalEventLabel">Add Event</h5>
+                <h5 class="modal-title">Add Event</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <%--@elvariable id="Award" type="com.mkyong.web.AwardsEntity"--%>
+            <form:form role="form" method = "POST" action="/addAward" modelAttribute="Award">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <input type="hidden" name="username" value="${user.username}"/>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Date:</h5>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="date" name="date" class="form-control" value="${user.date}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-12">
+                        <h5>Event Description:</h5>
+                        <input type="text" name="awardName" class="form-control" style="padding-bottom: 100px;" placeholder="Type description here">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form:form>
         </div>
     </div>
 </div>
 
-<!-- Modal Duty Events -->
-<div class="modal fade" id="exampleModalEvents" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalEventsLabel">Add Event</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Duty Diagnoses -->
+<!-- Modal Diagnoses -->
 <div class="modal fade" id="exampleModalDiagnoses" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document" style="max-width: 600px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalDiagnosesLabel">Add Diagnose</h5>
+                <h5 class="modal-title">Add Diagnose</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <%--@elvariable id="Diagnose" type="com.mkyong.web.DiagnosesEntity"--%>
+            <form:form role="form" method = "POST" action="/addDiagnose" modelAttribute="Diagnose">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <input type="hidden" name="username" value="${user.username}"/>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Date:</h5>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="date" name="date" class="form-control" value="${user.date}">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-2">
+                        <h5>Diagnose:</h5>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="name" class="form-control" placeholder="Type diagnose here">
+                    </div>
+                </div>
+                <div class="row form-group" style="margin: 15px">
+                    <div class="col-md-12">
+                        <h5>Description:</h5>
+                        <input type="text" name="description" class="form-control" style="padding-bottom: 100px;" placeholder="Type diagnose description here">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form:form>
         </div>
     </div>
 </div>

@@ -1,8 +1,6 @@
 package com.mkyong.web.controller;
 
-import com.mkyong.web.AwardsEntity;
-import com.mkyong.web.HibernateUtils;
-import com.mkyong.web.UsersEntity;
+import com.mkyong.web.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -18,6 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.sql.DataSource;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -71,7 +72,7 @@ public class MainController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
-			@RequestParam(value = "logout", required = false) String logout) {
+							  @RequestParam(value = "logout", required = false) String logout) {
 
 		ModelAndView model = new ModelAndView();
 		if (error != null) {
@@ -121,10 +122,22 @@ public class MainController {
 			model.addObject("email", user.getEmail());
 
 			model.addObject("user", user);
-			model.addObject("awards",    HibernateUtils.getAwardsByUsername(user.getUsername()));
-			model.addObject("dyties",    HibernateUtils.getDutiesByUsername(user.getUsername()));
-			model.addObject("events",    HibernateUtils.getEventsByUsername(user.getUsername()));
-			model.addObject("diagnoses", HibernateUtils.getDiagnosesByUsername(user.getUsername()));
+
+			List<AwardsEntity> Awards = HibernateUtils.getAwardsByUsername(user.getUsername());
+			Collections.reverse(Awards);
+			model.addObject("awards", Awards);
+
+			List<DutiesEntity> Duties = HibernateUtils.getDutiesByUsername(user.getUsername());
+			Collections.reverse(Duties);
+			model.addObject("dyties",Duties);
+
+			List<EventsEntity> Events = HibernateUtils.getEventsByUsername(user.getUsername());
+			Collections.reverse(Events);
+			model.addObject("events", Events);
+
+			List<DiagnosesEntity> Daignoses = HibernateUtils.getDiagnosesByUsername(user.getUsername());
+			Collections.reverse(Daignoses);
+			model.addObject("diagnoses", Daignoses);
 		}
 
 		return model;
@@ -192,23 +205,36 @@ public class MainController {
 		return model;
 	}
 
+	// add diagnose
+	// 1. @ModelAttribute bind form value
+	// 2. @Validated form validator
+	// 3. RedirectAttributes for flash value
+	@RequestMapping(value = "/addDiagnose", method = RequestMethod.POST)
+	public ModelAndView changeuser(@ModelAttribute("Diagnose") @Validated DiagnosesEntity Diagnose)
+	{
+		HibernateUtils.updateByEntity(Diagnose);
+		ModelAndView model = new ModelAndView(new RedirectView(String.format("/user?id=%s", Diagnose.getUsername())));
+
+		return model;
+	}
+
 	//for 403 access denied page
 	@RequestMapping(value = "/403", method = RequestMethod.GET)
 	public ModelAndView accesssDenied() {
 
 		ModelAndView model = new ModelAndView();
-		
+
 		//check if user is login
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		if (!(auth instanceof AnonymousAuthenticationToken)) {
 			UserDetails userDetail = (UserDetails) auth.getPrincipal();
 			System.out.println(userDetail);
-		
+
 			model.addObject("username", userDetail.getUsername());
 			model.addObject("username", userDetail.getUsername());
-			
+
 		}
-		
+
 		model.setViewName("403");
 		return model;
 
