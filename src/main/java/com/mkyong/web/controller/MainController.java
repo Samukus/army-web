@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
+import org.w3c.dom.events.EventException;
 
 import javax.sql.DataSource;
 import java.util.Collection;
@@ -108,76 +109,35 @@ public class MainController {
 
 		UsersEntity user = HibernateUtils.getUserByUsername(id);
 		if(user != null) {
-			model.addObject("fname", user.getFname());
-			model.addObject("sname", user.getSname());
-			model.addObject("tname", user.getTname());
-			model.addObject("date", user.getDate());
-			model.addObject("role", user.getWorkRole());
-			model.addObject("category", user.getCategory());
-			model.addObject("description", user.getDescription());
-			model.addObject("rank", user.getRank());
-			model.addObject("status", user.getStatus());
-			model.addObject("phone", user.getPhone());
-			model.addObject("address", user.getAdress());
-			model.addObject("email", user.getEmail());
-
 			model.addObject("user", user);
 
 			List<AwardsEntity> Awards = HibernateUtils.getAwardsByUsername(user.getUsername());
-			Collections.reverse(Awards);
+			if(Awards != null)
+				Collections.reverse(Awards);
+
 			model.addObject("awards", Awards);
 
 			List<DutiesEntity> Duties = HibernateUtils.getDutiesByUsername(user.getUsername());
-			Collections.reverse(Duties);
+			if(Duties != null)
+				Collections.reverse(Duties);
+
 			model.addObject("dyties",Duties);
 
 			List<EventsEntity> Events = HibernateUtils.getEventsByUsername(user.getUsername());
-			Collections.reverse(Events);
+			if(Events != null)
+				Collections.reverse(Events);
+
 			model.addObject("events", Events);
 
 			List<DiagnosesEntity> Daignoses = HibernateUtils.getDiagnosesByUsername(user.getUsername());
-			Collections.reverse(Daignoses);
+			if(Daignoses != null)
+				Collections.reverse(Daignoses);
+
 			model.addObject("diagnoses", Daignoses);
 		}
 
 		return model;
 	}
-
-//	@RequestMapping(value = "/user", method = RequestMethod.POST)
-//	public String userSubmit(@RequestParam(value = "id", required = true) String id,
-//							 @RequestParam(value = "fname", required = false) String fname,
-//							 @RequestParam(value = "sname", required = false) String sname,
-//							 @RequestParam(value = "tname", required = false) String tname,
-//							 @RequestParam(value = "date", required = false) Date date,
-//							 @RequestParam(value = "role", required = false) String role,
-//							 @RequestParam(value = "category", required = false) String category,
-//							 @RequestParam(value = "description", required = false) String description,
-//							 @RequestParam(value = "rank", required = false) String rank,
-//							 @RequestParam(value = "status", required = false) String status,
-//							 @RequestParam(value = "phone", required = false) String phone,
-//							 @RequestParam(value = "address", required = false) String address,
-//							 @RequestParam(value = "email", required = false) String email) {
-//
-//			UsersEntity user = new UsersEntity();
-//				user.setFname(fname));
-//				model.addObject("sname", user.getSname());
-//				model.addObject("tname", user.getTname());
-//				model.addObject("date", user.getDate());
-//				model.addObject("role", user.getWorkRole());
-//				model.addObject("category", user.getCategory());
-//				model.addObject("description", user.getDescription());
-//				model.addObject("rank", user.getRank());
-//				model.addObject("status", user.getStatus());
-//				model.addObject("phone", user.getPhone());
-//				model.addObject("address", user.getAdress());
-//				model.addObject("email", user.getEmail());
-//			}
-
-//	@RequestMapping(value = "/user", method = RequestMethod.POST)
-//
-//		return model;
-//	}
-
 
 	// save or update user
 	// 1. @ModelAttribute bind form value
@@ -218,6 +178,24 @@ public class MainController {
 		return model;
 	}
 
+	@RequestMapping(value = "/addEvent", method = RequestMethod.POST)
+	public ModelAndView changeuser(@ModelAttribute("Event") @Validated EventsEntity Event)
+	{
+		HibernateUtils.updateByEntity(Event);
+		ModelAndView model = new ModelAndView(new RedirectView(String.format("/user?id=%s", Event.getUsername())));
+
+		return model;
+	}
+
+	@RequestMapping(value = "/addDuty", method = RequestMethod.POST)
+	public ModelAndView changeuser(@ModelAttribute("Duty") @Validated DutiesEntity Duty)
+	{
+		HibernateUtils.updateByEntity(Duty);
+		ModelAndView model = new ModelAndView(new RedirectView(String.format("/user?id=%s", Duty.getUsername())));
+
+		return model;
+	}
+
 	//for 403 access denied page
 	@RequestMapping(value = "/403", method = RequestMethod.GET)
 	public ModelAndView accesssDenied() {
@@ -240,6 +218,14 @@ public class MainController {
 
 	}
 
+	@RequestMapping(value = "/remove", method = RequestMethod.GET)
+	public void remove(
+			@RequestParam(value = "id", required = true) int id,
+			@RequestParam(value = "table", required = true) String table) {
+		ModelAndView model = new ModelAndView(new RedirectView("/"));
 
+		HibernateUtils.removeById(table, id);
 
+//		return  model;
+	}
 }

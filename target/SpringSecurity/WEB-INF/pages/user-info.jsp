@@ -235,13 +235,25 @@
                         <tr>
                             <th>Year</th>
                             <th>Name of the award</th>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                <th style="width: 1px; white-space: nowrap;"></th>
+                            </sec:authorize>
                         </tr>
                         </thead>
                         <tbody>
                         <c:forEach items="${awards}" var="award">
-                            <tr>
+                            <tr id="award${award.awardId}">
                                 <td>${award.date}</td>
                                 <td>${award.awardName}</td>
+                                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                    <td>
+                                        <%--<a class="fa fa-trash-o btn btn-danger" aria-hidden="true" href="/remove?id=${award.awardId}&table=AwardsEntity">--%>
+                                        <a class="fa fa-trash-o btn btn-danger" aria-hidden="true"
+                                            onclick="$.get('/remove?id=${award.awardId}&table=AwardsEntity');
+                                                     document.getElementById('award${award.awardId}').innerHTML = '';">
+                                        </a>
+                                    </td>
+                                </sec:authorize>
                             </tr>
                         </c:forEach>
                         </tbody>
@@ -281,14 +293,25 @@
                             <th>Year</th>
                             <th>Rank</th>
                             <th>Military unit</th>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                <th style="width: 1px; white-space: nowrap;"></th>
+                            </sec:authorize>
                         </tr>
                         </thead>
                         <tbody>
                         <c:forEach items="${dyties}" var="item">
-                            <tr>
+                            <tr id="duty${item.dutyId}">
                                 <td>${item.dateStart}-${item.dateEnd}</td>
                                 <td>${item.rank}</td>
                                 <td>${item.militaryUnit}</td>
+                                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                    <td>
+                                        <a class="fa fa-trash-o btn btn-danger" aria-hidden="true"
+                                           onclick="$.get('/remove?id=${item.dutyId}&table=DutiesEntity');
+                                                   document.getElementById('duty${item.dutyId}').innerHTML = '';">
+                                        </a>
+                                    </td>
+                                </sec:authorize>
                             </tr>
                         </c:forEach>
                         </tbody>
@@ -327,13 +350,24 @@
                         <tr>
                             <th>Date</th>
                             <th>Description</th>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                <th style="width: 1px; white-space: nowrap;"></th>
+                            </sec:authorize>
                         </tr>
                         </thead>
                         <tbody>
                         <c:forEach items="${events}" var="item">
-                            <tr>
+                            <tr id="event${item.eventId}">
                                 <td>${item.date}</td>
                                 <td>${item.description}</td>
+                                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                    <td>
+                                        <a class="fa fa-trash-o btn btn-danger" aria-hidden="true"
+                                           onclick="$.get('/remove?id=${item.eventId}&table=EventsEntity');
+                                                   document.getElementById('event${item.eventId}').innerHTML = '';">
+                                        </a>
+                                    </td>
+                                </sec:authorize>
                             </tr>
                         </c:forEach>
                         </tbody>
@@ -373,14 +407,25 @@
                             <th>Date</th>
                             <th>Diagnose</th>
                             <th>Description</th>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                <th style="width: 1px; white-space: nowrap;"></th>
+                            </sec:authorize>
                         </tr>
                         </thead>
                         <tbody>
                         <c:forEach items="${diagnoses}" var="item">
-                            <tr>
+                            <tr id="diagnose${item.awardId}">
                                 <td>${item.date}</td>
                                 <td>${item.name}</td>
                                 <td>${item.description}</td>
+                                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                    <td>
+                                        <a class="fa fa-trash-o btn btn-danger" aria-hidden="true"
+                                           onclick="$.get('/remove?id=${item.awardId}&table=DiagnosesEntity');
+                                                   document.getElementById('diagnose${item.awardId}').innerHTML = '';">
+                                        </a>
+                                    </td>
+                                </sec:authorize>
                             </tr>
                         </c:forEach>
                         </tbody>
@@ -570,8 +615,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <%--@elvariable id="Award" type="com.mkyong.web.AwardsEntity"--%>
-            <form:form role="form" method = "POST" action="/addAward" modelAttribute="Award">
+            <%--@elvariable id="Duty" type="com.mkyong.web.DutiesEntity"--%>
+            <form:form role="form" method = "POST" action="/addDuty" modelAttribute="Duty">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <input type="hidden" name="username" value="${user.username}"/>
                 <div class="row form-group" style="margin: 15px">
@@ -579,7 +624,7 @@
                         <h5>Start Date:</h5>
                     </div>
                     <div class="col-md-10">
-                        <input type="date" name="date" class="form-control" value="${user.date}">
+                        <input type="date" name="dateStart" class="form-control" value="${user.date}">
                     </div>
                 </div>
                 <div class="row form-group" style="margin: 15px">
@@ -587,7 +632,7 @@
                         <h5>End Date:</h5>
                     </div>
                     <div class="col-md-10">
-                        <input type="date" name="date" class="form-control" value="${user.date}">
+                        <input type="date" name="dateEnd" class="form-control" value="${user.date}">
                     </div>
                 </div>
                 <div class="row form-group" style="margin: 15px">
@@ -595,7 +640,7 @@
                         <h5>Rank:</h5>
                     </div>
                     <div class="col-md-10">
-                        <input type="text" name="awardName" class="form-control" placeholder="Type Rank here">
+                        <input type="text" name="rank" class="form-control" placeholder="Type Rank here">
                     </div>
                 </div>
                 <div class="row form-group" style="margin: 15px">
@@ -603,7 +648,7 @@
                         <h5>Military unit:</h5>
                     </div>
                     <div class="col-md-10">
-                        <input type="text" name="awardName" class="form-control" style="padding-bottom: 100px;" placeholder="Type Military unit here">
+                        <input type="text" name="militaryUnit" class="form-control" style="padding-bottom: 100px;" placeholder="Type Military unit here">
                     </div>
                 </div>
 
@@ -626,8 +671,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <%--@elvariable id="Award" type="com.mkyong.web.AwardsEntity"--%>
-            <form:form role="form" method = "POST" action="/addAward" modelAttribute="Award">
+            <%--@elvariable id="Event" type="com.mkyong.web.EventsEntity"--%>
+            <form:form role="form" method = "POST" action="/addEvent" modelAttribute="Event">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <input type="hidden" name="username" value="${user.username}"/>
                 <div class="row form-group" style="margin: 15px">
@@ -641,7 +686,7 @@
                 <div class="row form-group" style="margin: 15px">
                     <div class="col-md-12">
                         <h5>Event Description:</h5>
-                        <input type="text" name="awardName" class="form-control" style="padding-bottom: 100px;" placeholder="Type description here">
+                        <input type="text" name="description" class="form-control" style="padding-bottom: 100px;" placeholder="Type description here">
                     </div>
                 </div>
 

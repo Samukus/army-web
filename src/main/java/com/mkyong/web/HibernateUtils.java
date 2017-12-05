@@ -47,6 +47,8 @@ public class HibernateUtils {
         {
             System.out.println(String.format("Username: %s", user.getUsername()));
         }
+
+        removeById("AwardsEntity", 4);
     }
 
     public static UsersEntity getUserByUsername(String Username) {
@@ -151,5 +153,21 @@ public class HibernateUtils {
         session.saveOrUpdate(Entity);
         trans.commit();
         session.close();
+    }
+
+    public static void removeById(String table, int id) {
+        Session session = getSession();
+        Transaction trans = session.getTransaction();
+
+        try {
+            trans.begin();
+            session.createQuery(String.format("delete from %s where id=%d", table, id)).executeUpdate();
+            trans.commit();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return;
+        }
     }
 }
