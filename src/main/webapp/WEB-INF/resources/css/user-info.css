@@ -1,7 +1,7 @@
 body{
 	/*background: #DAE3E7;*/
 
-	background: url("../pictures/user-page-background.jpg") no-repeat center center fixed;
+	background: url("../pictures/post-page-background.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

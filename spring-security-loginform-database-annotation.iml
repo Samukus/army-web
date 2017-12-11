@@ -16,9 +16,7 @@
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="674d92f6-dfa2-4b21-b0dd-9217519a9f38" />
         </datasource-map>
-        <naming-strategy-map>
-          <unit-entry name="hibernate.cfg.xml" />
-        </naming-strategy-map>
+        <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
@@ -52,6 +50,7 @@
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.30" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Hibernate 5.2.12-5.2.12" level="project" />
     <orderEntry type="library" name="Hibernate 5.2.12-5.2.12" level="project" />
     <orderEntry type="library" name="Hibernate 5.2.12-5.2.12" level="project" />
     <orderEntry type="library" name="Hibernate 5.2.12-5.2.12" level="project" />

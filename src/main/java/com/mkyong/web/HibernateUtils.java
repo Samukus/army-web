@@ -42,8 +42,10 @@ public class HibernateUtils {
             session.close();
         }
 
-        List<DutiesEntity> users = getDutiesByUsername("mkyong");
-        for (DutiesEntity user: users)
+        List<UsersEntity> users = HibernateUtils.getUsersByRole("ROLE_ADMIN");
+
+//        List<DutiesEntity> users = getDutiesByUsername("mkyong");
+        for (UsersEntity user: users)
         {
             System.out.println(String.format("Username: %s", user.getUsername()));
         }
@@ -62,6 +64,19 @@ public class HibernateUtils {
         return UserList.get(0);
     }
 
+    public static PostsEntity getPostById(String Id) {
+        Session session = getSession();
+        List<PostsEntity> List = session.createQuery(String.format("FROM PostsEntity where postId='%s'", Id)).list();
+        session.close();
+
+        if ( List == null || List.isEmpty())
+            return null;
+
+        return List.get(0);
+    }
+
+
+
     public static List<UsersEntity> getUsers(int offset, int count) {
         Session session = getSession();
         List<UsersEntity> UserList = session.createQuery(String.format("FROM UsersEntity", offset, count))
@@ -74,6 +89,20 @@ public class HibernateUtils {
             return null;
 
         return UserList;
+    }
+
+    public static List<PostsEntity> getPosts(int offset, int count) {
+        Session session = getSession();
+        List<PostsEntity> List = session.createQuery(String.format("FROM PostsEntity where enabled='1'", offset, count))
+                .setMaxResults(count)
+                .setFirstResult(offset)
+                .list();
+        session.close();
+
+        if ( List == null || List.isEmpty())
+            return null;
+
+        return List;
     }
 
     public static List<UsersEntity> getUsersByRole(String role) {

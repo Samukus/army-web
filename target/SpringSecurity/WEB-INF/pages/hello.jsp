@@ -14,8 +14,8 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="<c:url value="resources/css/bootstrap/bootstrap.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/js/bootstrap/bootstrap.js" />" rel="javascript">
-	<link href="<c:url value="resources/js/jquery/jquery-3.2.1.slim.min.js" />" rel="javascript">
+	<script src="<c:url value="resources/js/jquery/jquery.min.js" />"></script>
+	<script src="<c:url value="resources/js/bootstrap/bootstrap.bundle.min.js" />"></script>
 	<link href="<c:url value="resources/css/font-awesome.css" />" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="<c:url value="resources/css/hello.css" />" rel="stylesheet">
@@ -68,51 +68,59 @@
 
 			<!-- Jumbotron Header -->
 			<header class="jumbotron bg-dark text-white" style="margin-top: 20px; padding: 20px;">
-				<h1 class="display-3">Page Heading</h1>
-				<p class="lead">Secondary Text</p>
+				<h1 class="display-3">News</h1>
+				<p class="lead">Our last news and updates</p>
 			</header>
 
+			<c:forEach items="${posts}" var="item">
 			<!-- Blog Post -->
-			<div class="card mb-4">
-				<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+			<div class="card mb-4" id="post${item.postId}" style="border: 0px">
+				<c:if test="${!item.image.equals(\"\")}">
+					<img class="card-img-top" src="resources/pictures/${item.image}" alt="Card image cap">
+				</c:if>
 				<div class="card-body">
-					<h2 class="card-title">Post Title</h2>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-					<a href="#" class="btn btn-primary">Read More &rarr;</a>
+					<h2 class="card-title">${item.title}</h2>
+					<a href="/post?id=${item.postId}" class="btn btn-primary">Read More &rarr;</a>
+					<sec:authorize access="hasRole('ROLE_ADMIN')">
+							<a class="btn btn-danger fa fa-trash-o pull-right" aria-hidden="true"
+							   onclick="$.get('/remove-post?id=${item.postId}');
+									   document.getElementById('post${item.postId}').innerHTML = '';">
+							</a>
+					</sec:authorize>
 				</div>
 				<div class="card-footer text-muted">
-					Posted on January 1, 2017 by
-					<a href="#">Start Bootstrap</a>
+					Posted on ${item.date} by ${item.author}
 				</div>
 			</div>
+			</c:forEach>
 
-			<!-- Blog Post -->
-			<div class="card mb-4">
-				<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-				<div class="card-body">
-					<h2 class="card-title">Post Title</h2>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-					<a href="#" class="btn btn-primary">Read More &rarr;</a>
-				</div>
-				<div class="card-footer text-muted">
-					Posted on January 1, 2017 by
-					<a href="#">Start Bootstrap</a>
-				</div>
-			</div>
+			<%--<!-- Blog Post -->--%>
+			<%--<div class="card mb-4">--%>
+				<%--<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">--%>
+				<%--<div class="card-body">--%>
+					<%--<h2 class="card-title">Post Title</h2>--%>
+					<%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>--%>
+					<%--<a href="#" class="btn btn-primary">Read More &rarr;</a>--%>
+				<%--</div>--%>
+				<%--<div class="card-footer text-muted">--%>
+					<%--Posted on January 1, 2017 by--%>
+					<%--<a href="#">Start Bootstrap</a>--%>
+				<%--</div>--%>
+			<%--</div>--%>
 
-			<!-- Blog Post -->
-			<div class="card mb-4">
-				<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-				<div class="card-body">
-					<h2 class="card-title">Post Title</h2>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-					<a href="#" class="btn btn-primary">Read More &rarr;</a>
-				</div>
-				<div class="card-footer text-muted">
-					Posted on January 1, 2017 by
-					<a href="#">Start Bootstrap</a>
-				</div>
-			</div>
+			<%--<!-- Blog Post -->--%>
+			<%--<div class="card mb-4">--%>
+				<%--<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">--%>
+				<%--<div class="card-body">--%>
+					<%--<h2 class="card-title">Post Title</h2>--%>
+					<%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>--%>
+					<%--<a href="#" class="btn btn-primary">Read More &rarr;</a>--%>
+				<%--</div>--%>
+				<%--<div class="card-footer text-muted">--%>
+					<%--Posted on January 1, 2017 by--%>
+					<%--<a href="#">Start Bootstrap</a>--%>
+				<%--</div>--%>
+			<%--</div>--%>
 
 			<!-- Pagination -->
 			<ul class="pagination justify-content-center mb-4">
@@ -194,6 +202,13 @@
 					<button type="button" class="btn btn-outline-dark" style="width: 100%;">
 						<div class="row">
 							<div class="col-md-12 text-lg-left">
+								<span style="font-size: 16px">Add post</span>
+							</div>
+						</div>
+					</button>
+					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px">
+						<div class="row">
+							<div class="col-md-12 text-lg-left">
 								<span style="font-size: 16px">Add User</span>
 							</div>
 						</div>
@@ -202,20 +217,6 @@
 						<div class="row">
 							<div class="col-md-12 text-lg-left">
 								<span style="font-size: 16px">Remove User</span>
-							</div>
-						</div>
-					</button>
-					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px">
-						<div class="row">
-							<div class="col-md-12 text-lg-left">
-								<span style="font-size: 16px">Add post</span>
-							</div>
-						</div>
-					</button>
-					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px">
-						<div class="row">
-							<div class="col-md-12 text-lg-left">
-								<span style="font-size: 16px">Remove post</span>
 							</div>
 						</div>
 					</button>

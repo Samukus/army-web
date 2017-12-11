@@ -34,9 +34,11 @@ public class MainController {
 		model.addObject("title", "Army Web - Welcome");
 		model.addObject("message", "This is default page!");
 
+		List<PostsEntity> Posts = HibernateUtils.getPosts(0,20);
+		model.addObject("posts", Posts);
+
 		model.setViewName("hello");
 		return model;
-
 	}
 
 	@RequestMapping(value = { "/staff"}, method = RequestMethod.GET)
@@ -139,6 +141,21 @@ public class MainController {
 		return model;
 	}
 
+	@RequestMapping(value = "/post", method = RequestMethod.GET)
+	public ModelAndView post(
+			@RequestParam(value = "id", required = true) String id) {
+		ModelAndView model = new ModelAndView();
+
+		model.setViewName("post-info");
+
+		PostsEntity post= HibernateUtils.getPostById(id);
+		if(post != null) {
+			model.addObject("post", post);
+		}
+
+		return model;
+	}
+
 	// save or update user
 	// 1. @ModelAttribute bind form value
 	// 2. @Validated form validator
@@ -225,7 +242,16 @@ public class MainController {
 		ModelAndView model = new ModelAndView(new RedirectView("/"));
 
 		HibernateUtils.removeById(table, id);
+	}
 
-//		return  model;
+	@RequestMapping(value = "/remove-post", method = RequestMethod.GET)
+	public void disable_post(
+			@RequestParam(value = "id", required = true) String id) {
+
+		System.out.println("Disable where id=" + id);
+
+		PostsEntity post = HibernateUtils.getPostById(id);
+		post.setEnabled(0);
+		HibernateUtils.updateByEntity(post);
 	}
 }
