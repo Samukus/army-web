@@ -213,6 +213,20 @@
 							</div>
 						</div>
 					</button>
+					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px" data-toggle="modal" data-target="#exampleModalAddRole">
+						<div class="row">
+							<div class="col-md-12 text-lg-left">
+								<span style="font-size: 16px">User Add Role</span>
+							</div>
+						</div>
+					</button>
+					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px" data-toggle="modal" data-target="#exampleModalRemoveRole">
+						<div class="row">
+							<div class="col-md-12 text-lg-left">
+								<span style="font-size: 16px">User Remove Role</span>
+							</div>
+						</div>
+					</button>
 					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px" data-toggle="modal" data-target="#exampleModalRemove">
 						<div class="row">
 							<div class="col-md-12 text-lg-left">

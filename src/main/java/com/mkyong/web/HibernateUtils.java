@@ -211,4 +211,20 @@ public class HibernateUtils {
 
         return List;
     }
+
+    public static void removeRoleByUsernameAndRole(String username, String role) {
+        Session session = getSession();
+        Transaction trans = session.getTransaction();
+
+        try {
+            trans.begin();
+            session.createQuery(String.format("delete from UserRolesEntity where username='%s' and role='%s'", username, role)).executeUpdate();
+            trans.commit();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return;
+        }
+    }
 }

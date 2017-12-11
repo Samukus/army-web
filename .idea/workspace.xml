@@ -7,7 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ec12725-84a0-435b-a21c-88c94a296ea0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/modals.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/modals.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modals.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modals.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/modals.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="344" column="0" lean-forward="true" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
+            <state relative-caret-position="-57">
+              <caret line="428" column="50" lean-forward="false" selection-start-line="428" selection-start-column="28" selection-end-line="428" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -55,8 +58,14 @@
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <marker date="1513026040515" expanded="false" signature="2135:2147" ph="..." />
-                <marker date="1513026040515" expanded="false" signature="2584:2596" ph="..." />
+                <element signature="n#style#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <marker date="1513027421339" expanded="false" signature="2135:2147" ph="..." />
+                <marker date="1513027421339" expanded="false" signature="2584:2596" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,15 +104,17 @@
       <file leaf-file-name="hello.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="201" column="145" lean-forward="false" selection-start-line="201" selection-start-column="145" selection-end-line="201" selection-end-column="145" />
+            <state relative-caret-position="314">
+              <caret line="221" column="29" lean-forward="true" selection-start-line="221" selection-start-column="29" selection-end-line="221" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1513025438498" expanded="false" signature="4043:4049" ph="→" />
-                <marker date="1513025438498" expanded="false" signature="4808:4814" ph="→" />
+                <element signature="n#style#0;n#button#3;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1513027421323" expanded="false" signature="4043:4049" ph="→" />
+                <marker date="1513027421323" expanded="false" signature="4808:4814" ph="→" />
               </folding>
             </state>
           </provider>
@@ -119,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="286" column="0" lean-forward="false" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+            <state relative-caret-position="290">
+              <caret line="305" column="34" lean-forward="false" selection-start-line="305" selection-start-column="24" selection-end-line="305" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -147,8 +158,8 @@
       <file leaf-file-name="HibernateUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="202" column="58" lean-forward="false" selection-start-line="202" selection-start-column="40" selection-end-line="202" selection-end-column="58" />
+            <state relative-caret-position="318">
+              <caret line="214" column="50" lean-forward="false" selection-start-line="214" selection-start-column="23" selection-end-line="214" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,8 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;c:if</find>
-      <find>&lt;h2&gt;No</find>
       <find>user-in</find>
       <find>hello</find>
       <find>&lt;c:forEach items=&quot;${users}&quot; var=&quot;user&quot;&gt;</find>
@@ -200,6 +209,8 @@
       <find>addPos</find>
       <find>getPosts</find>
       <find>Disable where</find>
+      <find>Add</find>
+      <find>delete</find>
     </findStrings>
     <replaceStrings>
       <replace>login-page-background</replace>
@@ -243,13 +254,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/user-info.css" />
         <option value="$PROJECT_DIR$/src/main/resources/PostsEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-info.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/web/PostsEntity.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/post-info.jsp" />
         <option value="$PROJECT_DIR$/script/mysql.sql" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/modals.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/modals.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp" />
       </list>
     </option>
   </component>
@@ -669,12 +680,12 @@
       <workItem from="1512282058370" duration="31841000" />
       <workItem from="1512391055825" duration="11821000" />
       <workItem from="1512906673750" duration="1220000" />
-      <workItem from="1513011437250" duration="13972000" />
+      <workItem from="1513011437250" duration="15094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107054000" />
+    <option name="totallyTimeSpent" value="108176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
@@ -1050,16 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="202" column="58" lean-forward="false" selection-start-line="202" selection-start-column="40" selection-end-line="202" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/PostsEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1105,25 +1106,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/HibernateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="214" column="50" lean-forward="false" selection-start-line="214" selection-start-column="23" selection-end-line="214" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="305" column="34" lean-forward="false" selection-start-line="305" selection-start-column="24" selection-end-line="305" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="201" column="145" lean-forward="false" selection-start-line="201" selection-start-column="145" selection-end-line="201" selection-end-column="145" />
+        <state relative-caret-position="314">
+          <caret line="221" column="29" lean-forward="true" selection-start-line="221" selection-start-column="29" selection-end-line="221" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1513025438498" expanded="false" signature="4043:4049" ph="→" />
-            <marker date="1513025438498" expanded="false" signature="4808:4814" ph="→" />
+            <element signature="n#style#0;n#button#3;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1513027421323" expanded="false" signature="4043:4049" ph="→" />
+            <marker date="1513027421323" expanded="false" signature="4808:4814" ph="→" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/modals.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="344" column="0" lean-forward="true" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
+        <state relative-caret-position="-57">
+          <caret line="428" column="50" lean-forward="false" selection-start-line="428" selection-start-column="28" selection-end-line="428" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1134,17 +1155,15 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1513026040515" expanded="false" signature="2135:2147" ph="..." />
-            <marker date="1513026040515" expanded="false" signature="2584:2596" ph="..." />
+            <element signature="n#style#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <marker date="1513027421339" expanded="false" signature="2135:2147" ph="..." />
+            <marker date="1513027421339" expanded="false" signature="2584:2596" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/web/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="286" column="0" lean-forward="false" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

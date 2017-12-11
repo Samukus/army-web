@@ -259,11 +259,7 @@ public class MainController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		if (!(auth instanceof AnonymousAuthenticationToken)) {
 			UserDetails userDetail = (UserDetails) auth.getPrincipal();
-			System.out.println(userDetail);
-
 			model.addObject("username", userDetail.getUsername());
-			model.addObject("username", userDetail.getUsername());
-
 		}
 
 		model.setViewName("403");
@@ -287,5 +283,36 @@ public class MainController {
 		PostsEntity post = HibernateUtils.getPostById(id);
 		post.setEnabled(0);
 		HibernateUtils.updateByEntity(post);
+	}
+
+	@RequestMapping(value = "/addRole", method = RequestMethod.POST)
+	public ModelAndView addRole(
+			@RequestParam(value = "username", required = true) String username,
+			@RequestParam(value = "role", required = true) String role) {
+		try {
+			UserRolesEntity new_role = new UserRolesEntity();
+			new_role.setRole(role);
+			new_role.setUsername(username);
+			HibernateUtils.updateByEntity(new_role);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ModelAndView model = new ModelAndView(new RedirectView("/"));
+			return model;
+		}
+	}
+
+	@RequestMapping(value = "/removeRole", method = RequestMethod.POST)
+	public ModelAndView RemoveRole(
+			@RequestParam(value = "username", required = true) String username,
+			@RequestParam(value = "role", required = true) String role) {
+		try {
+			HibernateUtils.removeRoleByUsernameAndRole(username, role);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ModelAndView model = new ModelAndView(new RedirectView("/"));
+			return model;
+		}
 	}
 }
