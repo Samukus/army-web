@@ -35,6 +35,9 @@ public class MainController {
 		model.addObject("message", "This is default page!");
 
 		List<PostsEntity> Posts = HibernateUtils.getPosts(0,20);
+		if(Posts != null)
+			Collections.reverse(Posts);
+
 		model.addObject("posts", Posts);
 
 		model.setViewName("hello");
@@ -166,6 +169,39 @@ public class MainController {
 		HibernateUtils.updateByEntity(user);
 		ModelAndView model = new ModelAndView(new RedirectView(String.format("/user?id=%s", user.getUsername())));
 
+		List<UserRolesEntity> roles = HibernateUtils.getRolesByUsername(user.getUsername());
+
+		if(roles == null || roles.size() == 0) {
+			UserRolesEntity new_role = new UserRolesEntity();
+			new_role.setRole("ROLE_USER");
+			new_role.setUsername(user.getUsername());
+			HibernateUtils.updateByEntity(new_role);
+		}
+
+		return model;
+	}
+
+	@RequestMapping(value = "/remove-user", method = RequestMethod.POST)
+	public ModelAndView removeUser(@RequestParam(value = "username", required = true) String username)
+	{
+		UsersEntity user = HibernateUtils.getUserByUsername(username);
+		user.setEnabled((byte) 0);
+		HibernateUtils.updateByEntity(user);
+
+		ModelAndView model = new ModelAndView(new RedirectView(String.format("/")));
+		return model;
+	}
+
+	// add post
+	// 1. @ModelAttribute bind form value
+	// 2. @Validated form validator
+	// 3. RedirectAttributes for flash value
+	@RequestMapping(value = "/addPost", method = RequestMethod.POST)
+	public ModelAndView addPost(@ModelAttribute("Post") @Validated PostsEntity Post)
+	{
+		HibernateUtils.updateByEntity(Post);
+		ModelAndView model = new ModelAndView(new RedirectView("/"));
+
 		return model;
 	}
 
@@ -247,8 +283,6 @@ public class MainController {
 	@RequestMapping(value = "/remove-post", method = RequestMethod.GET)
 	public void disable_post(
 			@RequestParam(value = "id", required = true) String id) {
-
-		System.out.println("Disable where id=" + id);
 
 		PostsEntity post = HibernateUtils.getPostById(id);
 		post.setEnabled(0);

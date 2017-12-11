@@ -199,4 +199,16 @@ public class HibernateUtils {
             return;
         }
     }
+
+    public static List<UserRolesEntity> getRolesByUsername(String Username) {
+        Session session = getSession();
+        List<UserRolesEntity> List = session.createQuery(String.format("FROM UserRolesEntity where username='%s'", Username))
+                .list();
+        session.close();
+
+        if ( List == null || List.isEmpty())
+            return null;
+
+        return List;
+    }
 }

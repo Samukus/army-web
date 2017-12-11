@@ -9,6 +9,7 @@ public class PostsEntity {
     private String title;
     private String description;
     private String image;
+    private int enabled;
 
     public int getEnabled() {
         return enabled;
@@ -17,8 +18,6 @@ public class PostsEntity {
     public void setEnabled(int enabled) {
         this.enabled = enabled;
     }
-
-    private int enabled;
 
     public int getPostId() {
         return postId;

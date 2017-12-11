@@ -176,26 +176,26 @@ INSERT INTO events (username, date, description)
 VALUES ('mkyong', "1994-01-01", "Test Description");
 
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-01", "Test Post Title #0", "Test Post description #0 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_0.jpg");
+VALUES ('mkyong', "1994-01-01", "Test Post Title #0", "Test Post description #0 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_0.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-02", "Test Post Title #1", "Test Post description #1 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_1.jpg");
+VALUES ('mkyong', "1994-01-02", "Test Post Title #1", "Test Post description #1 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_1.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-03", "Test Post Title #2", "Test Post description #2 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_2.jpg");
+VALUES ('mkyong', "1994-01-03", "Test Post Title #2", "Test Post description #2 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_2.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-04", "Test Post Title #3", "Test Post description #3 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_3.jpg");
+VALUES ('mkyong', "1994-01-04", "Test Post Title #3", "Test Post description #3 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_3.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-05", "Test Post Title #4", "Test Post description #4 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_4.jpg");
+VALUES ('mkyong', "1994-01-05", "Test Post Title #4", "Test Post description #4 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_4.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-06", "Test Post Title #5", "Test Post description #5 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_5.jpg");
+VALUES ('mkyong', "1994-01-06", "Test Post Title #5", "Test Post description #5 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_5.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-07", "Test Post Title #6", "Test Post description #6 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_0.jpg");
+VALUES ('mkyong', "1994-01-07", "Test Post Title #6", "Test Post description #6 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_0.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-08", "Test Post Title #7", "Test Post description #7 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_1.jpg");
+VALUES ('mkyong', "1994-01-08", "Test Post Title #7", "Test Post description #7 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_1.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-09", "Test Post Title #8", "Test Post description #8 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_2.jpg");
+VALUES ('mkyong', "1994-01-09", "Test Post Title #8", "Test Post description #8 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_2.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-10", "Test Post Title #9", "Test Post description #9 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_3.jpg");
+VALUES ('mkyong', "1994-01-10", "Test Post Title #9", "Test Post description #9 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_3.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-11", "Test Post Title #10", "Test Post description #10 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "post_img_4.jpg");
+VALUES ('mkyong', "1994-01-11", "Test Post Title #10", "Test Post description #10 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_4.jpg");
 INSERT INTO posts (author, date, title, description, image)
 VALUES ('mkyong', "1994-01-11", "Test Post Title #10", "Test Post description #10 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "");

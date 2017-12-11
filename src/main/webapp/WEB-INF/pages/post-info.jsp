@@ -80,7 +80,7 @@
 
                 <div class="row" >
                     <div class="col-md-12"> <!-- Image -->
-                        <a href="#"><img class="rounded" src="resources/pictures/${post.image}" alt="Ibram" style="width:100%;height:100%"></a>
+                        <a href="#"><img class="rounded" src="${post.image}" alt="Ibram" style="width:100%;height:100%"></a>
                     </div>
                 </div>
             </div>

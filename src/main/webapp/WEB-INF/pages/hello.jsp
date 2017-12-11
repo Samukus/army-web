@@ -76,7 +76,7 @@
 			<!-- Blog Post -->
 			<div class="card mb-4" id="post${item.postId}" style="border: 0px">
 				<c:if test="${!item.image.equals(\"\")}">
-					<img class="card-img-top" src="resources/pictures/${item.image}" alt="Card image cap">
+					<img class="card-img-top" src="${item.image}" alt="Card image cap">
 				</c:if>
 				<div class="card-body">
 					<h2 class="card-title">${item.title}</h2>
@@ -199,21 +199,21 @@
 			<div class="card my-4">
 				<h5 class="card-header">Admin menu</h5>
 				<div class="card-body">
-					<button type="button" class="btn btn-outline-dark" style="width: 100%;">
+					<button type="button" class="btn btn-outline-dark" style="width: 100%;" data-toggle="modal" data-target="#exampleModalAddPost">
 						<div class="row">
 							<div class="col-md-12 text-lg-left">
 								<span style="font-size: 16px">Add post</span>
 							</div>
 						</div>
 					</button>
-					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px">
+					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px" data-toggle="modal" data-target="#exampleModalAdd">
 						<div class="row">
 							<div class="col-md-12 text-lg-left">
 								<span style="font-size: 16px">Add User</span>
 							</div>
 						</div>
 					</button>
-					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px">
+					<button type="button" class="btn btn-outline-dark" style="width: 100%; margin-top: 10px" data-toggle="modal" data-target="#exampleModalRemove">
 						<div class="row">
 							<div class="col-md-12 text-lg-left">
 								<span style="font-size: 16px">Remove User</span>
@@ -237,6 +237,6 @@
 	<!-- /.container -->
 </footer>
 <%--</sec:authorize>--%>
+<jsp:include page="modals.jsp"/>
 </body>
-
 </html>
