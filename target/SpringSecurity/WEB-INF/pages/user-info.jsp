@@ -89,7 +89,7 @@
 
         <div class="row" style="margin-top:20px;">
             <div class="col-md-3"> <!-- Image -->
-                <a href="#"> <img class="rounded-circle" src="resources/pictures/test-user-avatar.jpg" alt="Ibram" style="width:200px;height:200px"></a>
+                <a href="#"> <img class="rounded-circle" src="${user.photoLink}" alt="Ibram" style="width:200px;height:200px"></a>
             </div>
 
             <div class="col-sm-6"> <!-- Rank & Qualifications -->

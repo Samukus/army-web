@@ -69,133 +69,89 @@ CREATE TABLE posts (
   enabled TINYINT NOT NULL DEFAULT 1,
   PRIMARY KEY (post_id));
 
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong11','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong12','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong13','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong14','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong15','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong16','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong17','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong18','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong19','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong20','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-INSERT INTO users(username,password,enabled,fname,sname,tname,
-                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong21','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
+# soldier_img_0.jpg
+# soldier_img_1.jpg
+# soldier_img_2.jpg
+# soldier_img_3.jpg
+# soldier_img_4.jpg
+# soldier_img_scared.jpg
 
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong22','123456', true, "Ibram", "Gaunt", "", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
-
+VALUES ('mkyong','123456', true, "Ibram", "Gaunt", "Thirdname", "1994-01-01", "Commisar", "A+", "Biography here", "Retired General", "Retired", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('alex','123456', true, "Alexey", "Skrobotov", "Yurevich", "1994-04-12", "Suldier", "B-", "Biography here", "Soldier in reserve", "In reserve", "+78994123418", "Novosibirsk, Kr, 94", "test_alex@mail.com", "resources/pictures/test-user-avatar.jpg");
-
+VALUES ('alex','123456', true, "Alexey", "Skrobotov", "Yurevich", "1994-04-12", "Suldier", "B-", "Biography here", "Soldier in reserve", "In reserve", "+78994123418", "Novosibirsk, Kr, 94", "test_alex@mail.com", "resources/pictures/soldier_img_0.jpg");
 INSERT INTO users(username,password,enabled,fname,sname,tname,
                   date,work_role,category,description,rank, status, phone,adress,email,photo_link)
-VALUES ('mkyong23','123456', true, "Ibramafsa", "Gauntfasf", "", "1994-01-01", "Commisarfasf", "A++++", "Biography herefasf", "Retired Generala", "Retirede", "+78994123418", "Novosibirsk, Trudovaya, 13", "test@mail.com", "resources/pictures/test-user-avatar.jpg");
+VALUES ('kaldio','123456', true, "Anton", "Lovchikov", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/soldier_img_scared.jpg");
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('test0','123456', true, "Vahtan", "Kirde", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/soldier_img_0.jpg");
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('test1','123456', true, "Boryan", "Pau", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/soldier_img_1.jpg");
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('test2','123456', true, "Alaverdi", "Loned", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/soldier_img_2.jpg");
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('test3','123456', true, "Cuanish", "Gesheft", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/soldier_img_3.jpg");
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('test4','123456', true, "Meeruert", "Van", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/soldier_img_4.jpg");
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('test5','123456', true, "Sergey", "Paryshev", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/soldier_img_cat.jpg");
+INSERT INTO users(username,password,enabled,fname,sname,tname,
+                  date,work_role,category,description,rank, status, phone,adress,email,photo_link)
+VALUES ('trall','123456', true, "Trall", "Ebal", "Alexeyevich", "1994-10-30", "Suldier", "B-", "Simple guy from novosibirsk", "Soldier in reserve", "In reserve", "+715687456954", "Novosibirsk, Olenya, 51", "alovhikiv@mail.com", "resources/pictures/trall.jpg");
 
 INSERT INTO user_roles (username, role)
 VALUES ('mkyong', 'ROLE_USER');
 INSERT INTO user_roles (username, role)
+VALUES ('alex', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('kaldio', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('test0', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('test1', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('test2', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('test3', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('test4', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('test5', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('trall', 'ROLE_USER');
+
+INSERT INTO user_roles (username, role)
 VALUES ('mkyong', 'ROLE_ADMIN');
 INSERT INTO user_roles (username, role)
-VALUES ('alex', 'ROLE_USER');
-
-INSERT INTO awards (username, date, award_name)
-VALUES ('mkyong', "1994-01-01", "Test Award Name #0");
-INSERT INTO awards (username, date, award_name)
-VALUES ('mkyong', "1994-01-01", "Test Award Name #1");
-INSERT INTO awards (username, date, award_name)
-VALUES ('mkyong', "1994-01-01", "Test Award Name #2");
-INSERT INTO awards (username, date, award_name)
-VALUES ('mkyong', "1994-01-01", "Test Award Name )3");
-
-INSERT INTO duties (username, date_start, date_end, rank, military_unit)
-VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
-INSERT INTO duties (username, date_start, date_end, rank, military_unit)
-VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
-INSERT INTO duties (username, date_start, date_end, rank, military_unit)
-VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
-INSERT INTO duties (username, date_start, date_end, rank, military_unit)
-VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
-INSERT INTO duties (username, date_start, date_end, rank, military_unit)
-VALUES ('mkyong', "1994-01-01", "1996-02-01", "Soldier", "Test Military Unit");
-
-INSERT INTO diagnoses (username, date, name, description)
-VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
-INSERT INTO diagnoses (username, date, name, description)
-VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
-INSERT INTO diagnoses (username, date, name, description)
-VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
-INSERT INTO diagnoses (username, date, name, description)
-VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
-INSERT INTO diagnoses (username, date, name, description)
-VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
-INSERT INTO diagnoses (username, date, name, description)
-VALUES ('mkyong', "1994-01-01", "Test Diagnose Name", "Test Description");
-
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
-INSERT INTO events (username, date, description)
-VALUES ('mkyong', "1994-01-01", "Test Description");
+VALUES ('trall', 'ROLE_ADMIN');
+INSERT INTO user_roles (username, role)
+VALUES ('test2', 'ROLE_ADMIN');
+INSERT INTO user_roles (username, role)
+VALUES ('test5', 'ROLE_ADMIN');
 
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-01", "Test Post Title #0", "Test Post description #0 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_0.jpg");
+VALUES ('mkyong', "1994-01-01", "In developing client code for web service", "In developing client code for web services I've often found it necessary to explore post blobs coming from my app. Often times the server isn't available and this isn't an easy thing to do. Thus, I've put together a simple service which will dump the contents of an* HTTP POST to a file which can be viewed at leisure.", "resources/pictures/post_img_0.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-02", "Test Post Title #1", "Test Post description #1 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_1.jpg");
+VALUES ('mkyong', "1994-01-02", "View your posts here", "To view posts, browse to the year, month, day, and time of your upload (and directory name if you used the dir option) Obviously, this means all posts are visible to everybody so don't test a mobile banking app with your actual account info here.", "resources/pictures/post_img_1.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-03", "Test Post Title #2", "Test Post description #2 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_2.jpg");
+VALUES ('mkyong', "1994-01-03", "How to use it", "Just point your client to this service: http://posttestserver.com/post.php and fire away. By default it will return a 200 (see below for info on how to change this) with a URL pointing to the contents and a few lines describing the post.", "resources/pictures/post_img_2.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-04", "Test Post Title #3", "Test Post description #3 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_3.jpg");
+VALUES ('mkyong', "1994-01-04", "Supports", "Regular http posts Https via: https://posttestserver.com/post.php multipart/form-data file uploads (Example)", "resources/pictures/post_img_3.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-05", "Test Post Title #4", "Test Post description #4 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_4.jpg");
+VALUES ('mkyong', "1994-01-05", "Feedback", "Need something? Did I do something wrong? Let me know what's on your mind: me(at)henrycipolla(dotcom)", "resources/pictures/post_img_4.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-06", "Test Post Title #5", "Test Post description #5 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_5.jpg");
+VALUES ('mkyong', "1994-01-06", "See what your site looks like in different viewports with Responsinator", "The beauty of Responsinator lies in its simplicity. Just type in your web page's URL and this free, browser-based tool shows you how your web page renders in the most popular screen shapes and sizes.
+Brilliantly, you can then interact with your page, clicking on links, typing into search fields and so on. Note that these are generic devices, though, not specific ones.", "resources/pictures/post_img_5.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-07", "Test Post Title #6", "Test Post description #6 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_0.jpg");
+VALUES ('mkyong', "1994-01-07", "DevTools Device Mode emulates different devices within Chrome", "DevTools' Device Mode offers an easy way for developers to simulate mobile devices within the Chrome browser. Use it to learn how your site appears across different screen sizes and resolutions, including Retina screens.
+You can even simulate device inputs for touch, geolocation and device orientation within the emulator.", "resources/pictures/post_img_0.jpg");
 INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-08", "Test Post Title #7", "Test Post description #7 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_1.jpg");
-INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-09", "Test Post Title #8", "Test Post description #8 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_2.jpg");
-INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-10", "Test Post Title #9", "Test Post description #9 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_3.jpg");
-INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-11", "Test Post Title #10", "Test Post description #10 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_4.jpg");
-INSERT INTO posts (author, date, title, description, image)
-VALUES ('mkyong', "1994-01-11", "Test Post Title #10", "Test Post description #10 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "");
+VALUES ('mkyong', "1994-01-08", "Geolocations", "Test Post description #7 ashfjkh asrfh asf asoufh asf jashf ashfo hasiof hasoihf iasf", "resources/pictures/post_img_1.jpg");

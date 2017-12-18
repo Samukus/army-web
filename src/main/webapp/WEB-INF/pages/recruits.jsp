@@ -99,7 +99,7 @@
                 <div class="card btn btn-outline-dark" >
                     <a href="/user?id=${user.username}" style="text-decoration: none">
                             <%--<img class="card-img-top" src="http://placehold.it/500x325" alt="">--%>
-                        <img class="card-img-top" src="${user.photoLink}" alt="">
+                        <img class="card-img-top" src="${user.photoLink}" alt="" height="320" width="320">
                     </a>
                     <div class="card-body" >
                         <h4 class="card-title">${user.fname} ${user.sname}</h4>
